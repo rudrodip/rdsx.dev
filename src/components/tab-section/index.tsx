@@ -3,13 +3,11 @@ import Projects from "./project-section";
 import Experience from "./experience-section";
 import BlogSection from "./blog-section";
 import TIL from "./til-section";
-import ThemeToggler from "@/components/theme/theme-toggler";
 
 export default function TabSection() {
   return (
     <Tabs defaultValue="projects" className="relative w-full">
-      <div className="flex justify-between items-center">
-      <TabsList className="sticky top-5 sm:top-0 py-5 gap-1">
+      <TabsList className="sticky sm:top-0 py-5 gap-1 z-50">
         <TabsTrigger value="projects" className="pebble">
           Projects
         </TabsTrigger>
@@ -23,8 +21,6 @@ export default function TabSection() {
           TIL
         </TabsTrigger>
       </TabsList>
-      <ThemeToggler />
-      </div>
       <TabsContent value="projects" className="w-full">
         <Projects />
       </TabsContent>
