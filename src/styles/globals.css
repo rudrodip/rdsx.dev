@@ -82,11 +82,13 @@
 }
 
 #tab-section::-webkit-scrollbar {
-  width: 0rem;
+  background: transparent;
+  width: 0.1rem;
+  opacity: 0;
 }
 
-#tab-section:hover::-webkit-scrollbar {
-  width: 0.2rem;
+#tab-section:hover::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
 }
 
 #tab-section::-webkit-scrollbar-track {
@@ -96,7 +98,6 @@
 }
 
 #tab-section::-webkit-scrollbar-thumb {
-  background: hsl(var(--accent));
   border-radius: 25vw;
 }
 
