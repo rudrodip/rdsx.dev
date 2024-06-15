@@ -77,6 +77,40 @@
   }
 }
 
+*::-webkit-scrollbar {
+  width: 0rem;
+}
+
+#tab-section::-webkit-scrollbar {
+  width: 0rem;
+}
+
+#tab-section:hover::-webkit-scrollbar {
+  width: 0.2rem;
+}
+
+#tab-section::-webkit-scrollbar-track {
+  background: transparent;
+  margin-block: 0.5rem;
+  border-radius: 100vw;
+}
+
+#tab-section::-webkit-scrollbar-thumb {
+  background: hsl(var(--accent));
+  border-radius: 25vw;
+}
+
+::-moz-selection {
+  color: hsl(var(--accent));
+  background: hsl(var(--secondary));
+}
+
+::selection {
+  color: hsl(var(--accent));
+  background: hsl(var(--secondary));
+}
+
+
 /* Tailwind style */
 
 .app {
