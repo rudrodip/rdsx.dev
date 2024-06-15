@@ -7,31 +7,31 @@ export default function Hero() {
   return (
     <>
       <Link href="/">
-        <p className="font-mono text-sm underline">{siteConfig.name}</p>
+        <span className="font-mono text-sm underline">{siteConfig.name}</span>
       </Link>
       <h1 className="head-text-sm mt-6">{portfolioConfig.name}</h1>
       <h3 className="mt-2">{portfolioConfig.tagline}</h3>
       <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
       <Socials />
-      <div className="text-sm mt-16 space-y-1 rounded border-l-4 pl-2 max-w-2xl">
+      <div className="mt-16 space-y-2 rounded-xl border-l-4 py-2 pl-4 max-w-2xl text-muted-foreground">
         <p>
-          <span className="font-semibold">Frontend:</span> React, Next.js,
+          <span className="font-semibold text-primary/90">Frontend:</span> React, Next.js,
           Tailwindcss, Framer motion
         </p>
         <p>
-          <span className="font-semibold">Backend:</span> Hono.js, Express.js,
+          <span className="font-semibold text-primary/90">Backend:</span> Hono.js, Express.js,
           Fastapi, Fiber, Mux
         </p>
         <p>
-          <span className="font-semibold">Mobile:</span> React Native, Expo,
+          <span className="font-semibold text-primary/90">Mobile:</span> React Native, Expo,
           Flutter
         </p>
         <p>
-          <span className="font-semibold">Web3:</span> Solana, Anchor, Solana
+          <span className="font-semibold text-primary/90">Web3:</span> Solana, Anchor, Solana
           Wallet Provider, Solana Mobile Wallet Provider
         </p>
         <p>
-          <span className="font-semibold">Microcontroller:</span> Arduino (UNO,
+          <span className="font-semibold text-primary/90">Microcontroller:</span> Arduino (UNO,
           Nano, Micro, Mini), ESP32, ESP8266 PlatformIO, Raspberry Pi
         </p>
       </div>
