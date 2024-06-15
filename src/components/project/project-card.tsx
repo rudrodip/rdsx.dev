@@ -3,7 +3,7 @@
 import type { Project } from "@/types";
 import { ExternalLink, StepForward } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 
 type ProjectCardProps = {
   project: Project;
