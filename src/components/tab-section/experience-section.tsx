@@ -3,7 +3,7 @@ import type { Experience as ExperienceType } from "@/types";
 
 export default function ExperienceSection() {
   return (
-    <div className="w-full max-w-xl space-y-10 mt-6">
+    <div className="w-full max-w-xl space-y-10 mt-10">
       {experiencesConfig.map((exp, i) => {
         return (
           <Experience key={i} experience={exp} />
@@ -24,8 +24,8 @@ export const Experience = ({ experience }: { experience: ExperienceType }) => {
             className="hover:underline"
           >
             {experience.company.name}
-          </a>{" "}
-          <span className="text-xs px-2 py-1 bg-secondary rounded">
+          </a>
+          <span className="text-xs px-2 py-1 ml-2 bg-secondary rounded">
             {experience.location.name}
           </span>
         </p>
