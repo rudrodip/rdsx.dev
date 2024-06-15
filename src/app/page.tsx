@@ -7,13 +7,12 @@ import {
   LinkedInLogoIcon,
   DiscordLogoIcon,
 } from "@radix-ui/react-icons";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="w-full h-screen p-2 sm:p-5">
-      <div className="w-full h-full rounded-2xl sm:border flex flex-wrap justify-between divide-x">
+    <main className="w-full h-screen p-0 sm:p-5">
+      <div className="w-full h-full rounded-2xl sm:border flex flex-wrap justify-between lg:divide-x">
         <div className="w-full lg:w-2/5 p-5 md:p-8">
           <Link href="/">
             <p className="font-mono text-sm underline">{siteConfig.name}</p>
@@ -22,8 +21,26 @@ export default function Home() {
           <h3 className="mt-2">{portfolioConfig.tagline}</h3>
           <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
           <Socials />
+          <div className="text-sm mt-16 space-y-1 rounded border-l-4 pl-2 max-w-2xl">
+            <p>
+              <span className="font-semibold">Frontend:</span> React, Next.js, Tailwindcss, Framer motion
+            </p>
+            <p>
+              <span className="font-semibold">Backend:</span> Hono.js, Express.js, Fastapi, Fiber, Mux
+            </p>
+            <p>
+              <span className="font-semibold">Mobile:</span> React Native, Expo, Flutter
+            </p>
+            <p>
+              <span className="font-semibold">Web3:</span> Solana, Anchor, Solana Wallet Provider, Solana Mobile Wallet Provider
+            </p>
+            <p>
+              <span className="font-semibold">Microcontroller:</span> Arduino (UNO, Nano, Micro, Mini), ESP32, ESP8266 PlatformIO, Raspberry Pi
+            </p>
+          </div>
         </div>
-        <div className="w-full lg:w-3/5 overflow-y-scroll"></div>
+        <div className="w-full lg:w-3/5 p-5 md:p-8 overflow-y-scroll">
+        </div>
       </div>
     </main>
   );
