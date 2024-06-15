@@ -1,10 +1,11 @@
 import "@/styles/globals.css";
 import { Metadata } from "next/types";
-import { ThemeProvider } from "@/components/theme/theme-provider";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-import { Inter } from "next/font/google"
+import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site.config";
+import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ViewTransitions } from "next-view-transitions";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,7 +16,6 @@ const fontHeading = localFont({
   src: "../../assets/fonts/CalSans-SemiBold.woff2",
   variable: "--font-heading",
 });
-
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.siteUrl),
@@ -74,16 +74,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={cn(inter.variable, fontHeading.variable)}>
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-          <div className="flex flex-col min-h-screen">
-            <div className="flex-grow">
-              <div className="app">{children}</div>
+    <ViewTransitions>
+      <html lang="en" suppressHydrationWarning>
+        <body className={cn(inter.variable, fontHeading.variable)}>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <div className="flex flex-col min-h-screen">
+              <div className="flex-grow">
+                <div className="app">{children}</div>
+              </div>
             </div>
-          </div>
-        </ThemeProvider>
-      </body>
-    </html>
+          </ThemeProvider>
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }
