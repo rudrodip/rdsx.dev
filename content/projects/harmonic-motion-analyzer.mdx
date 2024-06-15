@@ -19,10 +19,39 @@ links: [
 ]
 ---
 
-# Harmonic Motion Analyzer
+hello
 
-```python
-import cv2
+### 2. Calculating Residuals
 
-# Load the cascade
+**Why?** To assess how closely the detected path resembles a circle and understand any deviations.
+
+**How?** I implemented the `circle_residuals` function, powered by `least_square`. This function calculates the differences between the observed data points and the expected points on a circle.
+
+```py
+def circle_residuals(params, x, y):
+  """
+  Calculate the residuals for circle fitting.
+
+  Args:
+      params: Parameters of the circle (a, b, r).
+      x: x-coordinates of data points.
+      y: y-coordinates of data points.
+
+  Returns:
+      Residuals indicating the difference between the data points and the circle model.
+  """
+  a, b, r = params
+  return np.sqrt((x - a) ** 2 + (y - b) ** 2) - r
 ```
+
+$$
+\text{Circle Residuals: } y_\text{predicted} = \sqrt{x^2 + y^2} - r
+$$
+
+Where:
+
+- $$ \text{predicted}_y $$ represents the predicted residuals.
+- $$ r $$ is the radius of the circle.
+- $$ x $$ and $$ y $$ are the arrays containing the x and y coordinates of data points.
+
+This equation calculates the residuals for fitting a circle to a set of data points.
