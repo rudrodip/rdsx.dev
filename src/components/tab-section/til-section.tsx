@@ -13,7 +13,7 @@ export default function TIL() {
           <div key={til.slugAsParams} className="relative pb-12">
             <span className="w-2 h-2 rounded-full bg-primary absolute top-3 -translate-y-1/2 left-2 -translate-x-1/2"></span>
             {i != tils.length - 1 && (
-              <div className="w-[2px] h-full absolute top-3 left-2 -translate-x-1/2 bg-primary -z-10"></div>
+              <div className="w-[2px] h-full absolute top-3 left-2 -translate-x-1/2 bg-accent -z-10"></div>
             )}
             <span className="text-sm ml-5 px-2 py-1 rounded bg-secondary">
               {new Date(til.date).toLocaleDateString()}
