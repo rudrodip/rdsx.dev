@@ -8,7 +8,7 @@ export default function Home() {
         <div className="w-full lg:w-2/5 p-5 md:p-8">
           <Hero />
         </div>
-        <div className="w-full lg:h-full lg:w-3/5 p-5 md:p-8 lg:overflow-y-scroll">
+        <div id="tab-section" className="w-full lg:h-full lg:w-3/5 p-5 md:p-8 lg:overflow-y-scroll">
           <TabSection />
         </div>
       </div>
