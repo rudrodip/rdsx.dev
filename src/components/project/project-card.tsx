@@ -16,7 +16,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       <div className="space-y-2 w-full tablet:w-3/5">
         <Link href={`/projects/${project.slugAsParams}`} className="space-y-2">
           <div className="inline-flex items-center gap-1 group/link">
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-xl font-semibold">{project.title}</h1>
               <span className="text-xs px-2 py-1 rounded bg-secondary">
                 {new Date(project.date).toDateString()}
@@ -30,7 +30,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             {project.description}
           </p>
         </Link>
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-wrap">
           {project.tags.map((tag) => (
             <p
               key={tag}
