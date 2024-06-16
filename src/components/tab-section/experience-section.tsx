@@ -29,10 +29,10 @@ export const Experience = ({ experience }: { experience: ExperienceType }) => {
             {experience.location.name}
           </span>
         </p>
-        <p className="text-muted-foreground text-sm">{experience.start} - {experience.end}</p>
+        <p className="text-muted-foreground text-xs">{experience.start} - {experience.end}</p>
       </div>
       <p>{experience.title}</p>
-      <ul className="list-disc pl-5 text-sm">
+      <ul className="list-disc pl-5 text-sm text-muted-foreground">
         {experience.description.map((exp, i) => {
           return (
             <li key={i}>{exp}</li>
