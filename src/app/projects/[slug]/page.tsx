@@ -2,7 +2,7 @@ import { projects } from "#site/content";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { ChevronLeft } from "lucide-react";
 import { Link } from "next-view-transitions";
-import Image from "next/image";
+import Picture from "@/components/picture";
 import { ExternalLink } from "lucide-react";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
@@ -24,13 +24,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
         />
         <span>Go back</span>
       </Link>
-      <Image
-        src={project.image.src}
+      <Picture
+        image={project.image}
+        imageDark={project.imageDark}
         alt={project.title}
-        width={900}
-        height={510}
-        blurDataURL={project.image.blurDataURL}
-        placeholder="blur"
         className="rounded-2xl border border-b-8"
       />
       <h1 className="head-text-md p-1 mt-6 mb-3">{project.title}</h1>
