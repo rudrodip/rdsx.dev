@@ -16,7 +16,7 @@ export default function ExperienceSection() {
 export const Experience = ({ experience }: { experience: ExperienceType }) => {
   return (
     <div>
-      <div className="flex justify-between">
+      <div className="flex justify-between flex-wrap">
         <p className="font-semibold">
           <a
             href={experience.company.url}
