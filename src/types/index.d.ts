@@ -46,16 +46,3 @@ export type Experience = {
   end: string;
   description: string[];
 };
-
-export type Project = {
-  slugAsParams: string;
-  title: string;
-  description: string;
-  tags: string[];
-  body: string;
-  image: Image;
-  links: {
-    name: string;
-    url: string;
-  }[];
-};
