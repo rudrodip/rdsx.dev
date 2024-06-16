@@ -11,7 +11,7 @@ const computedFields = <T extends { slug: string }>(data: T) => ({
   slugAsParams: data.slug.split("/").slice(1).join("/"),
 });
 
-const blogs = defineCollection({
+export const blogs = defineCollection({
   name: "Blog",
   pattern: "blog/**/*.mdx",
   schema: s
@@ -29,7 +29,7 @@ const blogs = defineCollection({
     .transform(computedFields),
 });
 
-const pages = defineCollection({
+export const pages = defineCollection({
   name: "Page",
   pattern: "pages/**/*.mdx",
   schema: s
@@ -40,7 +40,7 @@ const pages = defineCollection({
     .transform(computedFields),
 });
 
-const tils = defineCollection({
+export const tils = defineCollection({
   name: "TIL",
   pattern: "tils/**/*.mdx",
   schema: s
@@ -52,7 +52,7 @@ const tils = defineCollection({
     .transform(computedFields),
   });
 
-const authors = defineCollection({
+export const authors = defineCollection({
   name: "Author",
   pattern: "author/**/*.mdx",
   schema: s
@@ -65,7 +65,7 @@ const authors = defineCollection({
     .transform(computedFields),
 })
 
-const projects = defineCollection({
+export const projects = defineCollection({
   name: "Project",
   pattern: "projects/**/*.mdx",
   schema: s
@@ -73,9 +73,11 @@ const projects = defineCollection({
       slug: s.path(),
       title: s.string(),
       description: s.string(),
+      date: s.isodate(),
       tags: s.array(s.string()),
       body: s.mdx(),
       image: s.image(),
+      imageDark: s.image().optional(),
       links: s.array(
         s.object({
           name: s.string(),
