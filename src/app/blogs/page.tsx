@@ -3,11 +3,7 @@ import BlogCard from "@/components/blog/blog-card";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 
-export default function BlogSection({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function BlogSection() {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl sm:border flex flex-wrap justify-between lg:divide-x">

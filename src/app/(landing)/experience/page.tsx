@@ -13,7 +13,7 @@ export default function ExperienceSection() {
   );
 }
 
-export const Experience = ({ experience }: { experience: ExperienceType }) => {
+const Experience = ({ experience }: { experience: ExperienceType }) => {
   return (
     <div>
       <div className="flex justify-between flex-wrap">
