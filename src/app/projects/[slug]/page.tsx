@@ -5,10 +5,68 @@ import { Link } from "next-view-transitions";
 import Picture from "@/components/picture";
 import { IconMap } from "@/components/icon-map";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
+import { siteConfig } from "@/config/site.config";
 
-export default function ProjectPage({ params }: { params: { slug: string } }) {
+type ProjectPageProps = {
+  params: {
+    slug: string;
+  };
+};
+
+function getProjectFromParam(params: { slug: string }) {
   const slug = params.slug;
   const project = projects.find((project) => project.slugAsParams === slug);
+
+  if (!project) {
+    null;
+  }
+  return project;
+}
+
+export async function generateMetadata({
+  params,
+}: ProjectPageProps): Promise<Metadata> {
+  const project = getProjectFromParam(params);
+
+  if (!project) {
+    return {};
+  }
+
+  const ogUrl = new URL(`${siteConfig.siteUrl}${project.image.src}`);
+  ogUrl.searchParams.set("heading", project.title);
+  ogUrl.searchParams.set("type", "Blog Post");
+  ogUrl.searchParams.set("mode", "dark");
+
+  return {
+    title: `${project.title} | ${siteConfig.name} | ${siteConfig.creator.name}`,
+    description: project.description,
+    keywords: [...project.tags, ...siteConfig.keywords, project.title],
+    openGraph: {
+      title: `${project.title} | ${siteConfig.name} | ${siteConfig.creator.name}`,
+      description: project.description,
+      type: "article",
+      url: `${siteConfig.siteUrl}/projects/${project.slugAsParams}`,
+      images: [
+        {
+          url: ogUrl.toString(),
+          width: 1200,
+          height: 630,
+          alt: project.title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${project.title} | ${siteConfig.name}`,
+      description: project.description,
+      images: [ogUrl.toString()],
+    },
+  };
+}
+
+export default function ProjectPage({ params }: ProjectPageProps) {
+  const project = getProjectFromParam(params);
   
   if (!project) {
     notFound();

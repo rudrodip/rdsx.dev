@@ -27,12 +27,12 @@ export const siteConfig: Site = {
     "physics",
     "computer science",
   ],
-  siteUrl: "https://rdsx.dev",
+  siteUrl: "https://rdsx.vercel.app",
   creator: {
     name: "Rudro Dip Sarker",
     url: "https://rdsx.dev",
   },
-  ogImage: "https://rdsx.dev/og.png",
+  ogImage: "https://rdsx.vercel.app/og.png",
   links: {
     x: "https://x.com/rds_agi",
     github: "https://github.com/rudrodip",
