@@ -7,6 +7,8 @@ import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site.config";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ViewTransitions } from "next-view-transitions";
+import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({
   subsets: ["latin"],
@@ -78,6 +80,8 @@ export default function RootLayout({
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
         <body className={cn(inter.variable, fontHeading.variable)}>
+          <Analytics />
+          <SpeedInsights />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
           </ThemeProvider>
