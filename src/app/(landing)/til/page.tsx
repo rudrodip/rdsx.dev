@@ -50,7 +50,7 @@ export default function TIL() {
               <div className="w-[2px] h-full absolute top-3 left-2 -translate-x-1/2 bg-accent -z-10"></div>
             )}
             <span className="text-sm ml-5 px-2 py-1 rounded bg-secondary">
-              {new Date(til.date).toLocaleDateString()}
+              {new Date(til.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
             </span>
             <div className="ml-7">
               <MDXContentRenderer code={til.body} />
