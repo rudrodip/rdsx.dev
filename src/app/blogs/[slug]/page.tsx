@@ -86,11 +86,11 @@ export default async function BlogPost({ params }: BlogPageParams) {
         See all blogs
       </Link>
       <p className="px-2 py-1 rounded text-xs bg-secondary inline-block">
-        {new Date(blog.date).toLocaleString()}
+        {new Date(blog.date).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
       </p>
       <h1 className="head-text-sm my-3">{blog.title}</h1>
       <Picture
-        image={blog.imageDark}
+        image={blog.image}
         imageDark={blog.imageDark}
         alt={blog.title}
         className="w-full rounded-xl"
