@@ -13,8 +13,8 @@ export default function ProjectCard({ project }: ProjectCardProps) {
   return (
     <div className="flex p-3 justify-between gap-2 rounded-2xl border border-b-8 overflow-hidden">
       <div className="space-y-2 w-full tablet:w-3/5">
-        <Link href={`/projects/${project.slugAsParams}`} className="space-y-2">
-          <div className="inline-flex items-center gap-1 group/link">
+        <Link href={`/projects/${project.slugAsParams}`} className="space-y-2 group/link">
+          <div className="inline-flex items-center gap-1">
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-xl font-semibold">{project.title}</h1>
               <span className="text-xs px-2 py-1 rounded bg-secondary">
@@ -39,7 +39,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </p>
           ))}
         </div>
-        <div className="flex items-center gap-2">
+        <div className="flex flex-wrap items-center gap-2">
           {project.links.map((link) => (
             <a
               key={link.name}
