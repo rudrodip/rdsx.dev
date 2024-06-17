@@ -46,7 +46,7 @@ Write your blog posts, projects, tils in the `content` directory.
 ```bash
  root
 +├── content
-+│   ├── blog
++│   ├── blogs
 +│   │   └── hello-world.mdx
 +│   ├── projects
 +│   │   └── project.mdx
