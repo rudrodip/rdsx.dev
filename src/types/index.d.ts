@@ -20,13 +20,12 @@ export type Portfolio = {
   tagline: string;
   bio: string;
   links: {
-    x: string;
+    twitter: string;
     github: string;
     linkedin: string;
     mail: string;
     discord: string;
     youtube: string;
-    facebook: string;
     instagram: string;
   }
 }
