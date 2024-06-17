@@ -18,6 +18,7 @@ export default function Picture({ image, imageDark, alt, className }: PicturePro
         width={image.width}
         height={image.height}
         className={cn(imageDark && "block dark:hidden", className)}
+        priority
         blurDataURL={image.blurDataURL}
         placeholder="blur"
       />
@@ -27,6 +28,7 @@ export default function Picture({ image, imageDark, alt, className }: PicturePro
         width={imageDark.width}
         height={imageDark.height}
         className={cn("hidden dark:block", className)}
+        priority
         blurDataURL={imageDark.blurDataURL}
         placeholder="blur"
       />}
