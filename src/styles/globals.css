@@ -78,12 +78,12 @@
 }
 
 *::-webkit-scrollbar {
-  width: 0rem;
+  width: 0.2rem;
 }
 
 #tab-section::-webkit-scrollbar {
   background: transparent;
-  width: 0.1rem;
+  width: 0.2rem;
   opacity: 0;
 }
 
