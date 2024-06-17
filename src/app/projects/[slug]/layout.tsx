@@ -4,7 +4,7 @@ type ProjectLayoutProps = {
 
 export default function ProjectLayout({ children }: ProjectLayoutProps) {
   return (
-    <section className="w-full max-w-2xl mx-auto">
+    <section className="w-full">
       {children}
     </section>
   )
