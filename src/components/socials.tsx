@@ -1,10 +1,5 @@
 import { Button } from "@/components/ui/button";
-import {
-  TwitterLogoIcon,
-  GitHubLogoIcon,
-  LinkedInLogoIcon,
-  DiscordLogoIcon,
-} from "@radix-ui/react-icons";
+import { IconMap } from "./icon-map";
 import { portfolioConfig } from "@/config/portfolio.config";
 
 export const Socials = () => {
@@ -30,7 +25,7 @@ export const Socials = () => {
           Resume
         </a>
       </Button>
-      <a href={portfolioConfig.links.x} target="_blank" className="social-link">
+      {/* <a href={portfolioConfig.links.x} target="_blank" className="social-link">
         <TwitterLogoIcon />
       </a>
       <a
@@ -53,7 +48,15 @@ export const Socials = () => {
         className="social-link"
       >
         <LinkedInLogoIcon />
-      </a>
+      </a> */}
+      {Object.keys(portfolioConfig.links).map((key: string, index: number) => {
+        const link = portfolioConfig.links[key as keyof typeof portfolioConfig.links];
+        return (
+          <a key={key} href={link} target="_blank" className="social-link">
+            {IconMap[key as keyof typeof IconMap]}
+          </a>
+        );
+      })}
     </div>
   );
 };
