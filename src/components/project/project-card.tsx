@@ -1,9 +1,8 @@
-"use client";
-
 import { projects } from "#velite";
-import { ExternalLink, StepForward } from "lucide-react";
+import { StepForward } from "lucide-react";
 import { Link } from "next-view-transitions";
 import Picture from "@/components/picture";
+import { IconMap } from "@/components/icon-map";
 import { z } from "velite";
 
 type ProjectCardProps = {
@@ -40,16 +39,15 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             </p>
           ))}
         </div>
-        <div className="space-x-2 h-10">
+        <div className="flex items-center gap-2">
           {project.links.map((link) => (
             <a
               key={link.name}
               href={link.url}
               target="_blank"
-              className="p-2 text-xs inline-flex gap-1 items-center rounded-lg pebble"
+              className="social-link"
             >
-              <span>{link.name}</span>
-              <ExternalLink size={12} />
+              {IconMap[link.name.toLowerCase() as keyof typeof IconMap]}
             </a>
           ))}
         </div>
