@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <p
               key={tag}
-              className="px-2 py-1 rounded-lg bg-muted text-xs cursor-pointer"
+              className="px-2 py-1 rounded bg-muted text-xs cursor-pointer"
             >
               {tag}
             </p>
