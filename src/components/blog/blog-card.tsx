@@ -10,14 +10,14 @@ export default function BlogCard({
 }) {
   return (
     <Link href={`/blogs/${blog.slugAsParams}`}>
-      <div className="w-full h-full max-w-[22rem] rounded-xl overflow-hidden group/blog-card">
+      <div className="w-full h-full max-w-[22rem] rounded-xl overflow-hidden border hover:border-primary duration-100 transition-all ease-in-out">
         <Picture
-          image={blog.imageDark}
-          imageDark={blog.image}
+          image={blog.image}
+          imageDark={blog.imageDark}
           alt={blog.title}
           className="rounded-t-xl"
         />
-        <div className="p-3 rounded-b-xl border border-t-0 group-hover/blog-card:border-primary duration-100 transition-all ease-in-out">
+        <div className="p-3">
           <h1 className="text-xl font-semibold font-heading">{blog.title}</h1>
           <div className="flex items-center gap-2 flex-wrap mt-2">
             {blog.tags.map((tag) => (
