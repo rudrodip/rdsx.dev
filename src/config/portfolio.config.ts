@@ -10,7 +10,7 @@ export const portfolioConfig: Portfolio = {
     discord: "https://discordapp.com/users/841126921886498817",
     linkedin: "https://linkedin.com/in/rudrodip",
     mail: "mailto:official.rudrodipsarker@gmail.com",
-    youtube: "https://www.youtube.com/@rudrodipsarker",
+    youtube: "https://www.youtube.com/@rds_agi",
     instagram: "https://instagram.com/rds_agi",
   }
 }
