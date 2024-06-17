@@ -1,0 +1,73 @@
+---
+title: On scroll video playback effect
+description: Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs
+date: 2024-06-17
+tags: ["ffmpeg", "framer-motion", "nextjs", "video"]
+image: "./assets/on-scroll-playback/on-scroll.png"
+imageDark: "./assets/on-scroll-playback/on-scroll-dark.png"
+published: true
+author: rds
+---
+
+## Background
+
+We see a lot of modern websites e.g. [Apple](https://www.apple.com/airpods-pro), [Frame.io](https://frame.io) where the video playback is synced with the scroll position. This creates a illusion of complex animations and effects. Let's see how we can achieve this effect using ffmpeg, framer-motion & nextjs.
+
+Before we start, let's see a [demo](https://on-scroll-playback.vercel.app) of the effect we are going to achieve. You may need to refresh the page (this is a foreshadowing of an optimization we will discuss later in this article)
+
+## Prerequisites
+
+-  Basic knowledge of nextjs or react and framer motion
+
+## Steps
+
+There are only 3 steps to achieve this effect:
+
+1. Encode the video into a specific format
+2. Render the video using any video player
+3. Sync the time of video with the scroll position
+
+### Step 1: Encode the video
+
+We need to encode the video in such format that each frame can be seeked given a timestamp. We can use ffmpeg to encode the video. Here is the command to encode the video:
+
+```bash
+ffmpeg -i input_video.mp4 -movflags faststart -vcodec libx264 -crf 23 -g 1 -pix_fmt yuv420p output_video.mp4
+```
+
+### Step 2: Render the video
+
+We can use any video player to render the video. For this example, we will use the `video` tag in html.
+
+```tsx
+<video loop muted playsInline ref={videoRef}>
+  <source
+    src="video.mp4"
+    type="video/mp4"
+  />
+</video>
+```
+
+### Step 3: Sync the time
+
+We can use framer-motion to sync the time of video with the scroll position. Here is the code to achieve this effect:
+
+```tsx
+useMotionValueEvent(scrollY, "change", (latest) => {
+    const video = videoRef.current;
+    const timestamp = ...; // calculate the time based on the scroll position
+    video.currentTime = timestamp;
+});
+```
+
+I've skipped the implementation of `useMotionValueEvent` and calculation of `timestamp` for brevity. There are many ways to achieve this effect. Even you can achieve this effect without using any library. The key is to calculate the time based on the scroll position and set the `currentTime` of video accordingly.
+
+You can find the complete code in the [github repo](https://github.com/rudrodip/on-scroll-playback).
+
+## Optimization
+
+Here's a few tips to optimize the performance & user experience:
+
+1. Use a better video player rather than the default video tag. In react/nextjs, the default video tag sometimes misbehaves.
+2. Use HLS streaming for better performance.
+3. Host the video in a CDN for faster loading.
