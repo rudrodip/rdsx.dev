@@ -1,7 +1,7 @@
 import { projects } from "#site/content"
 import ProjectCard from "@/components/project/project-card"
 
-export default function Projects() {
+export default function Home() {
   const projectsSorted = projects.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
@@ -12,5 +12,5 @@ export default function Projects() {
         <ProjectCard key={index} project={project} />
       ))}
     </div>
-  )
+  );
 }

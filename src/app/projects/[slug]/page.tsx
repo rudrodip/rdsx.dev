@@ -4,12 +4,14 @@ import { ArrowLeft } from "lucide-react";
 import { Link } from "next-view-transitions";
 import Picture from "@/components/picture";
 import { IconMap } from "@/components/icon-map";
+import { notFound } from "next/navigation";
 
 export default function ProjectPage({ params }: { params: { slug: string } }) {
   const slug = params.slug;
   const project = projects.find((project) => project.slugAsParams === slug);
+  
   if (!project) {
-    return <p>Project not found</p>;
+    notFound();
   }
 
   return (

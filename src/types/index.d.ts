@@ -45,3 +45,8 @@ export type Experience = {
   end: string;
   description: string[];
 };
+
+export type NavItem = {
+  title: string;
+  url: string;
+}

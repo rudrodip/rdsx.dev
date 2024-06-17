@@ -21,9 +21,11 @@ export const blogs = defineCollection({
       description: s.string().max(999).optional(),
       date: s.isodate(),
       published: s.boolean().default(true),
-      tags: s.array(s.string()).optional(),
+      tags: s.array(s.string()),
       body: s.mdx(),
-      image: s.image().optional(),
+      image: s.image(),
+      imageDark: s.image(),
+      toc: s.toc(),
       author: s.string(),
     })
     .transform(computedFields),
