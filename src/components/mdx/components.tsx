@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { CodeBlock } from "./codeblock";
 import Image, { type ImageProps } from "next/image";
+import { Callout } from "./callout";
 
 export const mdxComponents = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -151,11 +152,12 @@ export const mdxComponents = {
   code: ({ className, ...props }: React.HTMLAttributes<HTMLElement>) => (
     <code
       className={cn(
-        "relative rounded px-[0.3rem] py-[0.2rem] font-mono text-sm",
+        "relative rounded border px-[0.3rem] py-[0.2rem] font-mono text-sm",
         className
       )}
       {...props}
     />
   ),
-  Image: (props: ImageProps) => <Image {...props} alt="blog image" />
+  Image: (props: ImageProps) => <Image {...props} alt="blog image" />,
+  Callout,
 };
