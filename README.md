@@ -9,6 +9,7 @@ It's a portfolio website with static blog posts written in MDX format.
 - SEO friendly
 - Responsive design
 - Sitemap
+- Analytics
 - [ ] RSS feed (coming soon)
 
 ## Tech Stack
@@ -20,6 +21,8 @@ It's a portfolio website with static blog posts written in MDX format.
 - **Content**: MDX
 - **Content Management**: Github
 - **Content Generation**: [Velite](https://velite.js.org/)
+- **Deployment**: Vercel
+- **Analytics**: Vercel Analytics, Vercel Speed Analytics
 
 I'm using a [view transition lib](https://github.com/shuding/next-view-transitions) for this website. It's a simple and lightweight library that provides a smooth transition between pages by [Shu Ding](https://x.com/shuding_)
 
