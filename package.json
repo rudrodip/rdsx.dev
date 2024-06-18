@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "velite && next dev",
     "build": "velite && next build",
+    "rss:build": "bun run src/lib/rss.ts",
     "start": "velite && next start",
     "lint": "next lint"
   },
@@ -21,6 +22,7 @@
     "@vercel/speed-insights": "^1.0.12",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "feed": "^4.2.2",
     "lucide-react": "^0.395.0",
     "mdast-util-toc": "^7.1.0",
     "next": "14.2.4",
