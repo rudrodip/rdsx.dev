@@ -3,6 +3,8 @@ import { portfolioConfig } from "@/config/portfolio.config";
 import { Socials } from "@/components/socials";
 import Link from "next/link";
 import ThemeToggler from "@/components/theme/theme-toggler";
+import { Rss } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export default function Hero() {
   return (
@@ -12,7 +14,14 @@ export default function Hero() {
       </Link>
       <div className="flex justify-between items-center mt-6">
         <h1 className="head-text-sm">{portfolioConfig.name}</h1>
-        <ThemeToggler />
+        <div className="flex items-center gap-2">
+          <Button size="icon" variant="ghost" className="rounded-full" asChild>
+            <Link href="/feed">
+              <Rss size={18} />
+            </Link>
+          </Button>
+          <ThemeToggler />
+        </div>
       </div>
       <h3 className="mt-2">{portfolioConfig.tagline}</h3>
       <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
