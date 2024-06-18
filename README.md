@@ -17,7 +17,6 @@ It's a portfolio website with static blog posts written in MDX format.
 - **Language**: TypeScript
 - **Framework**: Next 14
 - **Styling**: Tailwind CSS
-- **UI Components**: [ShadCN](https://ui.shadcn.com)
 - **Content**: MDX
 - **Content Management**: Github
 - **Content Generation**: [Velite](https://velite.js.org/)
