@@ -1,27 +1,28 @@
 import { MetadataRoute } from 'next'
- 
+import { siteConfig } from '@/config/site.config'
+
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: 'https://rdsx.vercel.app',
+      url: `${siteConfig.siteUrl}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 1,
     },
     {
-      url: 'https://rdsx.vercel.app/blogs',
+      url: `${siteConfig.siteUrl}/blogs`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,
     },
     {
-      url: 'https://rdsx.vercel.app/experience',
+      url: `${siteConfig.siteUrl}/experience`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.5,
     },
     {
-      url: 'https://rdsx.vercel.app/til',
+      url: `${siteConfig.siteUrl}/til`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.5,
