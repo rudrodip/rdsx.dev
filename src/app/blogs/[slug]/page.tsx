@@ -67,6 +67,14 @@ export async function generateMetadata({
   };
 }
 
+export async function generateStaticParams(): Promise<
+  BlogPageParams["params"][]
+> {
+  return blogs.map((blog) => ({
+    slug: blog.slugAsParams,
+  }));
+}
+
 export default async function BlogPost({ params }: BlogPageParams) {
   const blog = getBlogFromParam(params);
   if (!blog) {
@@ -86,7 +94,11 @@ export default async function BlogPost({ params }: BlogPageParams) {
         See all blogs
       </Link>
       <p className="px-2 py-1 rounded text-xs bg-secondary inline-block">
-        {new Date(blog.date).toLocaleString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+        {new Date(blog.date).toLocaleString("en-US", {
+          month: "long",
+          day: "numeric",
+          year: "numeric",
+        })}
       </p>
       <h1 className="head-text-sm my-3">{blog.title}</h1>
       <Picture
