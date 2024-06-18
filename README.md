@@ -10,7 +10,7 @@ It's a portfolio website with static blog posts written in MDX format.
 - Responsive design
 - Sitemap
 - Analytics
-- [ ] RSS feed (coming soon)
+- RSS feeds
 
 ## Tech Stack
 
