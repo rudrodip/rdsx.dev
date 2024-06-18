@@ -2,13 +2,13 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://rdsx.dev</id>
     <title>Blogs | rdsx.dev</title>
-    <updated>2024-06-18T05:31:07.566Z</updated>
+    <updated>2024-06-18T05:33:44.350Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://rdsx.dev"/>
     <link rel="self" href="https://rdsx.dev/atom.xml"/>
     <subtitle>Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!</subtitle>
     <logo>https://rdsx.dev/logo.png</logo>
-    <icon>https://rdsx.dev/favicon.png</icon>
+    <icon>https://rdsx.dev/logo.png</icon>
     <rights>All rights reserved 2024, Rudro Dip Sarker</rights>
     <entry>
         <title type="html"><![CDATA[On scroll video playback effect]]></title>
