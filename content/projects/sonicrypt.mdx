@@ -3,15 +3,15 @@ title: Sonicrypt
 description: Sonicrypt is the world's first blockchain transaction sonification device to provide immediate auditory and visual confirmation of successful payments, thereby instilling confidence and trust in digital transactions
 tags: ["Solana", "ESP-32", "C++", "Next.js", "React Native"]
 date: 2024-04-20
-image: "./assets/sonicrypt.png"
-imageDark: "./assets/sonicrypt-dark.png"
+image: "./assets/sonicrypt/sonicrypt.png"
+imageDark: "./assets/sonicrypt/sonicrypt-dark.png"
 links:
   [
     { name: "GitHub", url: "https://github.com/Sonicrypt" },
     { name: "Website", url: "https://sonicrypt.rdsx.dev" },
     { name: "Twitter", url: "https://x.com/sonicrypt" },
     { name: "Youtube", url: "https://www.youtube.com/watch?v=yUm7kYV3p28" },
-    { name: "LinkedIn", url: "https://www.linkedin.com/company/sonicrypt" }
+    { name: "LinkedIn", url: "https://www.linkedin.com/company/sonicrypt" },
   ]
 ---
 
@@ -21,7 +21,7 @@ links:
   <iframe
     className="w-full"
     height="450"
-    src="https://www.youtube.com/embed/yUm7kYV3p28"
+    src="https://www.youtube.com/embed/yUm7kYV3p28?mute=1&autoplay=1"
     title="Sonicrypt - the new UX for web3"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
     referrerPolicy="strict-origin-when-cross-origin"
@@ -30,7 +30,13 @@ links:
 </div>
 
 <br />
-<video muted autoPlay loop className="w-full aspect-video">
+<video
+  muted
+  autoPlay
+  loop
+  className="w-full aspect-video"
+  poster="./assets/sonicrypt/sonicrypt.png"
+>
   <source src="https://firebasestorage.googleapis.com/v0/b/collabsync-yt.appspot.com/o/white-theme.mp4?alt=media&token=34acc426-7e1e-4588-be73-aca560871353" />
 </video>
 
@@ -94,6 +100,7 @@ The Sonicrypt App is a mobile application that allows users to connect and confi
 - Customize Sonicrypt device settings
 
 #### Built in emulator
+
 <br />
 <div className="flex flex-wrap justify-between w-full">
   <img width="200" src="./assets/sonicrypt/app1.webp" />
@@ -106,12 +113,10 @@ The Sonicrypt App is a mobile application that allows users to connect and confi
 - **Firmware**
   - **Language:** C++
   - **Microcontroller:** ESP32-S3
-  
 - **Mobile app**
   - **Language:** Typescript, Javascript
   - **Framework:** React Native (Expo)
   - **Libs/SDKs:** Solana web3js, Solana mobile wallet adapter
-  
 - **Website**
   - **Language:** Typescript
   - **Framework:** Next.JS
@@ -120,7 +125,10 @@ The Sonicrypt App is a mobile application that allows users to connect and confi
   - **Libs/SDKs:** Solana web3js
 
 <div className="flex justify-center items-center">
- <img width="70%" src="https://github.com/rudrodip/rudrodip/assets/77154365/3b034a80-8fb4-4c1b-9671-bbd13850e3c8" />
+  <img
+    width="70%"
+    src="https://github.com/rudrodip/rudrodip/assets/77154365/3b034a80-8fb4-4c1b-9671-bbd13850e3c8"
+  />
 </div>
 
 ## Open-Source and No Hidden Costs
