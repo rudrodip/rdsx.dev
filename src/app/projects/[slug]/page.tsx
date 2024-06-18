@@ -82,6 +82,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 size={18}
                 className="group-hover/back:-translate-x-1 transition-transform transform-gpu duration-100 ease-in-out"
               />
+              <span className="sr-only">rdsx.dev</span>
             </Link>
             <p className="px-2 py-1 text-xs rounded bg-secondary">
               {new Date(project.date).toDateString()}
@@ -106,6 +107,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                   className="social-link"
                 >
                   {IconMap[link.name.toLowerCase() as keyof typeof IconMap]}
+                  <span className="sr-only">
+                    {`${link.name} - ${link.url}`}
+                  </span>
                 </a>
               ))}
             </div>

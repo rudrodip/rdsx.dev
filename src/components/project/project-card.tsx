@@ -48,6 +48,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               className="social-link"
             >
               {IconMap[link.name.toLowerCase() as keyof typeof IconMap]}
+              <span className="sr-only">
+                {`${link.name} - ${link.url}`}
+              </span>
             </a>
           ))}
         </div>

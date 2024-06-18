@@ -18,6 +18,7 @@ export default function Hero() {
           <Button size="icon" variant="ghost" className="rounded-full" asChild>
             <Link href="/feed">
               <Rss size={18} />
+              <span className="sr-only">rss feed</span>
             </Link>
           </Button>
           <ThemeToggler />

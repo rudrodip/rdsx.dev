@@ -25,35 +25,14 @@ export const Socials = () => {
           Resume
         </a>
       </Button>
-      {/* <a href={portfolioConfig.links.x} target="_blank" className="social-link">
-        <TwitterLogoIcon />
-      </a>
-      <a
-        href={portfolioConfig.links.github}
-        target="_blank"
-        className="social-link"
-      >
-        <GitHubLogoIcon />
-      </a>
-      <a
-        href={portfolioConfig.links.discord}
-        target="_blank"
-        className="social-link"
-      >
-        <DiscordLogoIcon />
-      </a>
-      <a
-        href={portfolioConfig.links.linkedin}
-        target="_blank"
-        className="social-link"
-      >
-        <LinkedInLogoIcon />
-      </a> */}
       {Object.keys(portfolioConfig.links).map((key: string, index: number) => {
         const link = portfolioConfig.links[key as keyof typeof portfolioConfig.links];
         return (
           <a key={key} href={link} target="_blank" className="social-link">
             {IconMap[key as keyof typeof IconMap]}
+            <span className="sr-only">
+              {`${key} - ${link}`}
+            </span>
           </a>
         );
       })}
