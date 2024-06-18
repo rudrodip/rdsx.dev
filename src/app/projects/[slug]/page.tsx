@@ -90,8 +90,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <Picture
             image={project.image}
             imageDark={project.imageDark}
+            width={600}
+            height={400}
             alt={project.title}
-            className="border border-b-8 rounded-xl"
+            className="border border-b-8 rounded-xl mx-auto"
           />
           <h1 className="head-text-sm p-1 mt-6 mb-4">{project.title}</h1>
           <div className="mb-8">
