@@ -113,15 +113,6 @@
 
 
 /* Tailwind style */
-
-.app {
-  @apply relative flex flex-col overflow-x-hidden lg:mx-auto px-2 lg:px-0;
-}
-
-.blogs-container {
-  @apply overflow-x-hidden max-w-5xl mx-3 lg:mx-auto;
-}
-
 .head-text {
   @apply text-4xl font-extrabold font-heading leading-[1.15] md:text-6xl sm:text-7xl;
 }
@@ -132,38 +123,6 @@
 
 .head-text-sm {
   @apply text-2xl font-extrabold font-heading leading-[1.15] sm:text-4xl;
-}
-
-.desc {
-  @apply mt-5 text-lg sm:text-xl max-w-2xl;
-}
-
-.abs-center {
-  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
-}
-
-.abs-center-horizontal {
-  @apply absolute left-1/2 -translate-x-1/2;
-}
-
-.abs-center-vertical {
-  @apply absolute top-1/2 -translate-y-1/2;
-}
-
-.sticky-center-horizontal {
-  @apply sticky;
-}
-
-.flex-cc {
-  @apply flex items-center justify-center;
-}
-
-.flex-cc-col {
-  @apply flex flex-col items-center justify-center;
-}
-
-.flex-cb {
-  @apply flex items-center justify-between;
 }
 
 .social-link {
