@@ -63,6 +63,10 @@ Write your blog posts, projects, tils in the `content` directory.
 
 Read the [velite docs](https://velite.js.org/guide/quick-start) for more information on how to use it.
 
+- Configure website information in `src/config/site.config.ts`
+- Configure personal information in `src/config/portfolio.config.ts`
+- Configure experience information in `src/config/experience.config.ts`
+
 ## License
 
 [GNU AFFERO GENERAL PUBLIC LICENSE](LICENSE)
