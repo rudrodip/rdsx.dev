@@ -57,6 +57,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           <Picture
             image={project.image}
             imageDark={project.imageDark}
+            width={250}
+            height={100}
+            quality={100}
             alt={project.title}
             className="w-full h-full object-cover"
           />
