@@ -74,7 +74,7 @@ const Experience = ({ experience }: { experience: ExperienceType }) => {
           <a
             href={experience.company.url}
             target="_blank"
-            className="hover:underline"
+            className="hover:underline font-heading text-lg"
           >
             {experience.company.name}
           </a>
@@ -86,7 +86,7 @@ const Experience = ({ experience }: { experience: ExperienceType }) => {
           {experience.start} - {experience.end}
         </p>
       </div>
-      <p>{experience.title}</p>
+      <p className="tracking-tight">{experience.title}</p>
       <ul className="list-disc pl-5 text-sm text-muted-foreground">
         {experience.description.map((exp, i) => {
           return <li key={i}>{exp}</li>;
