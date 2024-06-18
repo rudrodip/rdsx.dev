@@ -1,6 +1,6 @@
 import { blogs } from "#velite";
 import { z } from "velite";
-import Picture from "../picture";
+import Picture from "@/components/picture";
 import { Link } from "next-view-transitions";
 
 export default function BlogCard({
@@ -14,8 +14,10 @@ export default function BlogCard({
         <Picture
           image={blog.image}
           imageDark={blog.imageDark}
+          width={200}
+          height={150}
           alt={blog.title}
-          className="rounded-t-xl"
+          className="rounded-t-xl w-full"
         />
         <div className="p-3">
           <h1 className="text-xl font-semibold font-heading">{blog.title}</h1>
