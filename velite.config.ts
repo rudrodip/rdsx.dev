@@ -18,7 +18,7 @@ export const blogs = defineCollection({
     .object({
       slug: s.path(),
       title: s.string().max(99),
-      description: s.string().max(999).optional(),
+      description: s.string().max(999),
       date: s.isodate(),
       published: s.boolean().default(true),
       tags: s.array(s.string()),
