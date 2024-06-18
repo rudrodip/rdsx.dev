@@ -1,0 +1,16 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Blogs | rdsx.dev",
+    "home_page_url": "https://rdsx.dev",
+    "feed_url": "https://rdsx.dev/rss.json",
+    "description": "Blogs | rdsx.dev | Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!",
+    "icon": "https://rdsx.dev/logo.png",
+    "items": [
+        {
+            "url": "https://rdsx.dev/blogs/on-scroll-playback",
+            "title": "On scroll video playback effect",
+            "summary": "Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs",
+            "date_modified": "2024-06-17T00:00:00.000Z"
+        }
+    ]
+}
