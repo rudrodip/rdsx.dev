@@ -18,7 +18,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             <div className="flex items-center gap-2 flex-wrap">
               <h1 className="text-xl font-semibold font-heading">{project.title}</h1>
               <span className="text-xs px-2 py-1 rounded bg-secondary">
-                {new Date(project.date).toDateString()}
+                {new Date(project.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </span>
             </div>
             <span className="-translate-x-1 opacity-0 group-hover/link:translate-x-0 group-hover/link:opacity-100 transition-all duration-100 ease-in-out">
@@ -40,9 +40,9 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          {project.links.map((link) => (
+          {project.links.map((link, i) => (
             <a
-              key={link.name}
+              key={i}
               href={link.url}
               target="_blank"
               className="social-link"
@@ -52,7 +52,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           ))}
         </div>
       </div>
-      <div className="w-2/5 aspect-video overflow-hidden pebble rounded-xl hidden tablet:block">
+      <div className="w-2/5 aspect-video overflow-hidden hover:border duration-100 transition-all transform-gpu ease-in-out rounded-xl hidden tablet:block">
         <Link href={`/projects/${project.slugAsParams}`}>
           <Picture
             image={project.image}
@@ -61,7 +61,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             height={100}
             quality={100}
             alt={project.title}
-            className="w-full h-full object-cover"
+            className="w-full h-full object-cover scale-100 hover:scale-105 transition-all transform-gpu ease-in-out"
           />
         </Link>
       </div>
