@@ -74,12 +74,12 @@ export default async function BlogPost({ params }: BlogPageParams) {
   }
 
   return (
-    <article className="container relative max-w-3xl py-6 lg:py-16">
+    <article className="relative max-w-3xl px-2 lg:px-0 py-6 lg:py-16">
       <Link
         href="/blogs"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden xl:inline-flex"
+          "absolute left-[-200px] top-14 hidden lg:inline-flex"
         )}
       >
         <ArrowLeftIcon className="mr-2 h-4 w-4" />
