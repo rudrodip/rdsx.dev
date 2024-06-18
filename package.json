@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "velite && bun run rss:build && next dev",
     "build": "velite && bun run rss:build && next build",
-    "rss:build": "bun run src/lib/rss.ts",
+    "rss:build": "bun run rss.ts",
     "start": "velite && next start",
     "lint": "next lint"
   },
