@@ -3,17 +3,13 @@ import "@/styles/code.css"
 import { Metadata } from "next/types";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
-import { Inter } from "next/font/google";
 import { siteConfig } from "@/config/site.config";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ViewTransitions } from "next-view-transitions";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-});
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 
 const fontHeading = localFont({
   src: "../../assets/fonts/CalSans-SemiBold.woff2",
@@ -79,7 +75,7 @@ export default function RootLayout({
   return (
     <ViewTransitions>
       <html lang="en" suppressHydrationWarning>
-        <body className={cn(inter.variable, fontHeading.variable)}>
+        <body className={cn(fontHeading.variable, GeistSans.variable, GeistMono.variable)}>
           <Analytics />
           <SpeedInsights />
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
