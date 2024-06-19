@@ -7,6 +7,12 @@
     "icon": "https://rdsx.dev/logo.png",
     "items": [
         {
+            "url": "https://rdsx.dev/blogs/buildspace-os-mod",
+            "title": "I modded the Buildspace OS",
+            "summary": "A journey of me modding the buildspace os chrome extension to customize the look",
+            "date_modified": "2024-06-20T00:00:00.000Z"
+        },
+        {
             "url": "https://rdsx.dev/blogs/on-scroll-playback",
             "title": "On scroll video playback effect",
             "summary": "Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs",
