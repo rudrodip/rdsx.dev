@@ -15,7 +15,7 @@ export default function BlogCard({
           image={blog.image}
           imageDark={blog.imageDark}
           width={200}
-          height={150}
+          height={111}
           alt={blog.title}
           className="rounded-t-xl w-full"
         />
