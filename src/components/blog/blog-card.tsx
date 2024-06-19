@@ -34,9 +34,12 @@ export default function BlogCard({
           <p className="text-sm text-muted-foreground mt-2">
             {blog.description}
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            {new Date(blog.date).toLocaleDateString()}
+          <div className="w-full flex justify-end">
+
+          <p className="text-xs text-muted-foreground mt-2 px-2 py-1 rounded bg-secondary">
+            {new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
           </p>
+          </div>
         </div>
       </div>
     </Link>
