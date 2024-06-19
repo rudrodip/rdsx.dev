@@ -1,12 +1,12 @@
-[data-rehype-pretty-code-fragment] code {
+[data-rehype-pretty-code-figure] code {
   @apply grid min-w-full break-words border-none bg-transparent pl-3 text-sm text-black;
   counter-reset: line;
   box-decoration-break: clone;
 }
-[data-rehype-pretty-code-fragment] .line {
+[data-rehype-pretty-code-figure] .line {
   @apply px-4 py-1;
 }
-[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
+[data-rehype-pretty-code-figure] [data-line-numbers] > .line::before {
   counter-increment: line;
   content: counter(line);
   display: inline-block;
@@ -15,13 +15,13 @@
   text-align: right;
   color: gray;
 }
-[data-rehype-pretty-code-fragment] .line--highlighted {
+[data-rehype-pretty-code-figure] .line--highlighted {
   @apply bg-slate-300 bg-opacity-10;
 }
-[data-rehype-pretty-code-fragment] .line-highlighted span {
+[data-rehype-pretty-code-figure] .line-highlighted span {
   @apply relative;
 }
-[data-rehype-pretty-code-fragment] .word--highlighted {
+[data-rehype-pretty-code-figure] .word--highlighted {
   @apply rounded-md bg-slate-300 bg-opacity-10 p-1;
 }
 [data-rehype-pretty-code-title] {
