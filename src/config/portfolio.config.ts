@@ -4,6 +4,7 @@ export const portfolioConfig: Portfolio = {
   name: "Rudro Dip Sarker",
   tagline: "I gaslight rocks 🪨 to think 🧠",
   bio: "Hey 👋 RDS here! I am a software developer and founder of Sonicrypt. I build web applications, mobile applications, dapps, backend servers, and embedded devices.",
+  resume: "https://drive.google.com/file/d/1srIHh6uw_lW5PWJzwOw5JvKPhczZJ3P3/view?usp=sharing",
   links: {
     twitter: "https://x.com/rds_agi",
     github: "https://github.com/rudrodip",
