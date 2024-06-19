@@ -1,9 +1,10 @@
 import { defineConfig, defineCollection, s } from "velite";
 import rehypeSlug from "rehype-slug";
-import rehypeKatex from "rehype-katex"
-import remarkMath from 'remark-math'
-import remarkGfm from "remark-gfm"
+import rehypeKatex from "rehype-katex";
+import remarkMath from "remark-math";
+import remarkGfm from "remark-gfm";
 import rehypePrettyCode from "rehype-pretty-code";
+import { LineElement } from "rehype-pretty-code";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 
 const computedFields = <T extends { slug: string }>(data: T) => ({
@@ -52,7 +53,7 @@ export const tils = defineCollection({
       body: s.mdx(),
     })
     .transform(computedFields),
-  });
+});
 
 export const authors = defineCollection({
   name: "Author",
@@ -65,7 +66,7 @@ export const authors = defineCollection({
       link: s.string().optional(),
     })
     .transform(computedFields),
-})
+});
 
 export const projects = defineCollection({
   name: "Project",
@@ -104,7 +105,25 @@ export default defineConfig({
     rehypePlugins: [
       rehypeSlug,
       rehypeKatex,
-      [rehypePrettyCode, { theme: "github-dark" }],
+      [
+        rehypePrettyCode,
+        {
+          theme: "one-dark-pro",
+          onVisitLine(node: LineElement) {
+            // Prevent lines from collapsing in `display: grid` mode, and allow empty
+            // lines to be copy/pasted
+            if (node.children.length === 0) {
+              node.children = [{ type: "text", value: " " }];
+            }
+          },
+          onVisitHighlightedLine(node: LineElement) {
+            node.properties.className?.push("line--highlighted");
+          },
+          onVisitHighlightedWord(node: LineElement) {
+            node.properties.className = ["word--highlighted"];
+          },
+        },
+      ],
       [
         rehypeAutolinkHeadings,
         {
