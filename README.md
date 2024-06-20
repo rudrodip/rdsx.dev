@@ -15,6 +15,8 @@ You can check the live demo of this website [rdsx.dev![rdsx.dev](.github/assets/
 - Sitemap generation
 - Analytics integration
 
+[pagespeed.web.dev <br /><img width="500px" src="https://github.com/rudrodip/rdsx.dev/assets/77154365/7e02fb43-4a0a-4959-b7e3-61df0ca82d0f" />](https://pagespeed.web.dev/analysis/https-www-rdsx-dev/5dbg63wkcn?form_factor=desktop)
+
 ## Tech Stack
 
 - **Language**: TypeScript
