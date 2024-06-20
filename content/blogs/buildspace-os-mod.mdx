@@ -15,6 +15,7 @@ Source code: [github.com/rudrodip/buildspace-os-mod](https://github.com/rudrodip
 Don't forget to star the repo if you like it.
 
 Demo video [here](#demo)
+
 </Callout>
 
 # backstory
@@ -119,9 +120,7 @@ It just can't do it for some reason. If anyone knows how to do it, please let me
 
 So, I thought alright, if [Tampermonkey](https://www.tampermonkey.net) can work on the home page, surely the chrome extension has the ability to modify the html of the iframe. As I went straight to chatgpt, and asked to write code for my requirements. And it did, it did some modifications to `manifest.json` to add `content.js` file, and wrote the `content.js` file.
 
-<Callout>
-Every mention of chatgpt is a reference to the gpt-4o model
-</Callout>
+<Callout>Every mention of chatgpt is a reference to the gpt-4o model</Callout>
 
 But I was getting an error, `Uncaught DOMException: Failed to read a named property 'document' from 'Window': Blocked a frame with origin "chrome-extension://..." from accessing a cross-origin frame.`
 
@@ -200,9 +199,9 @@ I was very excited, so I made another input field that lets me insert any html, 
 This is how it looked:
 
 <div align="center">
-<br />
-<img width="300px" src="assets/buildspace-os-mod/ui-1.png" />
-<br />
+  <br />
+  <img width="300px" src="assets/buildspace-os-mod/ui-1.png" />
+  <br />
 </div>
 
 <span
@@ -230,9 +229,9 @@ I woke up, and went to the buildspace website for week one updates. One thing th
 So I thought, as the [buildspace os mod](https://github.com/rudrodip/buildspace-os-mod) is a fork of the origin buildspace os, why not just make it look like the buildspace website. So, I did that. I added some css to make it look like the buildspace website. And, it looked amazing.
 
 <div align="center">
-<br />
-<img width="300px" src="assets/buildspace-os-mod/ui-2.png" />
-<br />
+  <br />
+  <img width="300px" src="assets/buildspace-os-mod/ui-2.png" />
+  <br />
 </div>
 
 Oh, one thing, remember the video I made? I shared it with my friends. So, in that video I showed how to inject html into the iframe. And I specifically chose to inject an ifrmae of a youtube embed, you might wonder which video? I chose the [all the way (amv)](https://www.youtube.com/watch?v=zhPayDylYSc) by buildspace. Its a super nice song btw, 101% recommended.
@@ -249,9 +248,9 @@ Oh, one thing, remember the video I made? I shared it with my friends. So, in th
 So, I thought it would be nice to have a input field that let's me enter any video url, and it will replace the video with the video. So, I did that. I added a input field that lets me enter any video url, and it will replace the video with the video. It worked for regular video urls, but not for youtube embed urls.
 
 <div align="center">
-<br />
-<img width="300px" src="assets/buildspace-os-mod/ui-final.png" />
-<br />
+  <br />
+  <img width="300px" src="assets/buildspace-os-mod/ui-final.png" />
+  <br />
 </div>
 
 I wrote some more code to make it work for youtube embed urls, and it worked. I was able to replace the video with the video.
@@ -273,7 +272,14 @@ I was very happy with the result 🥹 I recorded a new video for it, and pushed 
 
 Here's the demo video:
 
-<video className="w-full" controls src="https://github.com/rudrodip/buildspace-os-mod/assets/77154365/1fd7173c-a79e-4113-bab9-2f7a10213bc5" />
+<iframe
+  className="w-full"
+  height="450"
+  src="https://www.youtube.com/embed/3I7Lr93ekvg?autoplay=1&loop=1&playlist=3I7Lr93ekvg"
+  title="i modded buildspace-os 😝"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerpolicy="strict-origin-when-cross-origin"
+></iframe>
 
 # technical details
 
@@ -284,11 +290,29 @@ The chrome extension has two main files, `popup.js` and `content.js`. The `backg
 I wrote a `popup.html` file for the UI of the extension. When user submits the form, `popup.js` first saves the field values in the `chrome.storage.local` and then sends a message to the `content.js` file.
 
 ```js
-form.addEventListener("submit", e => {
+form.addEventListener("submit", (e) => {
   // ...
-  chrome.storage.sync.set({ title, image, video, autoplay, loop, muted, controls, html })
-  chrome.runtime.sendMessage({ title, image, video, autoplay, loop, muted, controls, html })
-})
+  chrome.storage.sync.set({
+    title,
+    image,
+    video,
+    autoplay,
+    loop,
+    muted,
+    controls,
+    html,
+  });
+  chrome.runtime.sendMessage({
+    title,
+    image,
+    video,
+    autoplay,
+    loop,
+    muted,
+    controls,
+    html,
+  });
+});
 ```
 
 The `content.js` has one main function called `init()`, what it does is on every load, it retrieves the values from the storage and injects those in the iframe.
