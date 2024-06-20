@@ -126,7 +126,7 @@
 }
 
 .social-link {
-  @apply rounded border active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 transition-all duration-100 ease-in-out flex justify-center items-center;
+  @apply w-8 h-8 rounded border active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 transition-all duration-100 ease-in-out flex justify-center items-center;
 }
 
 .pebble {
