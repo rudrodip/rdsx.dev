@@ -6,7 +6,6 @@ export const Socials = () => {
   return (
     <div className="flex flex-wrap items-center gap-2">
       <Button
-        size="sm"
         className="shadow-none hover:bg-background hover:text-primary border border-transparent hover:border hover:border-b-4 hover:border-primary/30 active:border-b transition-all"
       >
         <a href="https://cal.com/rds_agi" target="_blank">
@@ -14,7 +13,6 @@ export const Socials = () => {
         </a>
       </Button>
       <Button
-        size="sm"
         variant="outline"
         className="active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100"
       >
@@ -28,12 +26,14 @@ export const Socials = () => {
       {Object.keys(portfolioConfig.links).map((key: string, index: number) => {
         const link = portfolioConfig.links[key as keyof typeof portfolioConfig.links];
         return (
-          <a key={key} href={link} target="_blank" className="social-link">
+          <Button key={key} size="icon" variant="outline" className="active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 hover:bg-background shadow-none transition-all duration-100" asChild>
+            <a href={link} target="_blank">
             {IconMap[key as keyof typeof IconMap]}
             <span className="sr-only">
               {`${key} - ${link}`}
             </span>
           </a>
+          </Button>
         );
       })}
     </div>

@@ -24,7 +24,7 @@ export default function Hero() {
           <ThemeToggler />
         </div>
       </div>
-      <h3 className="mt-2">{portfolioConfig.tagline}</h3>
+      <h3 className="mt-2 text-lg">{portfolioConfig.tagline}</h3>
       <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
       <Socials />
       <div className="mt-16 space-y-2 rounded-lg border-l-4 py-2 pl-4 max-w-2xl text-muted-foreground">

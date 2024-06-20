@@ -7,7 +7,7 @@ import { navbarConfig } from "@/config/navbar.config";
 
 export default function Navbar() {
   return (
-    <div className="inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-muted-foreground sticky sm:top-0 py-5 gap-1 z-50">
+    <div className="inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-foreground sticky sm:top-0 py-5 gap-1 z-50">
       {navbarConfig.map((item, index) => (
         <NavItem key={index} url={item.url}>
           {item.title}
