@@ -15,7 +15,7 @@ export default function BlogSection() {
           className="relative w-full max-w-4xl mx-auto lg:h-full lg:w-3/5 p-2 md:p-8 lg:overflow-y-scroll"
         >
           <Navbar />
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:gap-8">
+          <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
             {blogs.map((blog) => (
               <BlogCard key={blog.title} blog={blog} />
             ))}
