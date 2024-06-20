@@ -26,8 +26,6 @@ export type Portfolio = {
     linkedin: string;
     mail: string;
     discord: string;
-    youtube: string;
-    instagram: string;
   }
 }
 
