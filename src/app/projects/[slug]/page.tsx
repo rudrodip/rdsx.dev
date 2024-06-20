@@ -107,9 +107,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <h1 className="head-text-sm p-1 mt-6 mb-4">{project.title}</h1>
           <div className="mb-8">
             <div className="flex flex-wrap items-center gap-2 mb-4">
-              {project.links.map((link) => (
+              {project.links.map((link, i) => (
                 <a
-                  key={link.name}
+                  key={i}
                   href={link.url}
                   target="_blank"
                   className="social-link"
