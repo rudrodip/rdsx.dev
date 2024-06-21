@@ -17,7 +17,7 @@ export default function BlogCard({
           width={200}
           height={111}
           alt={blog.title}
-          className="rounded-t-xl w-full"
+          className="w-full"
         />
         <div className="p-3">
           <h1 className="text-xl font-semibold font-heading">{blog.title}</h1>
