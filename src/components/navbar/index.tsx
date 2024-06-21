@@ -7,9 +7,13 @@ import { navbarConfig } from "@/config/navbar.config";
 
 export default function Navbar() {
   return (
-    <div className="inline-flex h-9 items-center justify-center rounded-lg bg-muted p-1 text-foreground sticky sm:top-0 py-5 gap-1 z-50">
+    <div className="inline-flex items-center text-sm rounded-lg nav-container">
       {navbarConfig.map((item, index) => (
-        <NavItem key={index} url={item.url}>
+        <NavItem
+          key={index}
+          url={item.url}
+          className={cn(index == 0 && "rounded-l-lg border-l-[0.5px]", index == navbarConfig.length - 1 && "rounded-r-lg border-r-[0.5px]")}
+        >
           {item.title}
         </NavItem>
       ))}
@@ -20,8 +24,9 @@ export default function Navbar() {
 type NavItemProps = {
   children: React.ReactNode;
   url: string;
+  className?: string;
 };
-const NavItem = ({ children, url }: NavItemProps) => {
+const NavItem = ({ children, url, className }: NavItemProps) => {
   const pathname = usePathname();
   const active = pathname === url || (pathname.includes(url) && url !== "/");
 
@@ -29,8 +34,9 @@ const NavItem = ({ children, url }: NavItemProps) => {
     <Link href={url}>
       <div
         className={cn(
-          "inline-flex items-center justify-center whitespace-nowrap rounded-md px-3 py-1 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 pebble",
-          active && "bg-background text-foreground shadow"
+          "p-2 w-24 text-center hover:bg-secondary cursor-pointer border-t-[0.5px] bg-background",
+          active ? "current font-semibold" : "nav-item",
+          className
         )}
       >
         {children}
