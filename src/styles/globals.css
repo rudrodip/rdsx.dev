@@ -126,9 +126,21 @@
 }
 
 .social-link {
-  @apply w-8 h-8 rounded border active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 transition-all duration-100 ease-in-out flex justify-center items-center;
+  @apply w-8 h-8 rounded border active:border-b active:scale-[0.97] hover:border-[0.2px] hover:border-b-4 hover:border-primary/30 transition-all duration-100 ease-in-out flex justify-center items-center;
 }
 
 .pebble {
   @apply border border-transparent active:border-b active:scale-[0.97] hover:border-b-4 hover:border-primary/30 transition-all transform-gpu duration-100 ease-in-out;
+}
+
+.nav-item {
+  box-shadow: 0px -3px 2px rgba(0, 0, 0, 0.15) inset;
+}
+
+.current {
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.08) inset, 0px -1px 0.5px rgba(0, 0, 0, 0.08) inset;
+}
+
+.nav-container {
+  box-shadow: 1px 5px 5px rgba(0, 0, 0, 0.02), -1px 5px 5px rgba(0, 0, 0, 0.02);
 }
