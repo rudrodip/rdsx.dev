@@ -1,7 +1,7 @@
 import { projects } from "#site/content";
 import { MDXContentRenderer } from "@/components/mdx/mdx-content-renderer";
 import { ArrowLeft } from "lucide-react";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Picture from "@/components/picture";
 import { IconMap } from "@/components/icon-map";
 import { notFound } from "next/navigation";

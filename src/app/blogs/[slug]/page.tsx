@@ -1,6 +1,6 @@
 import { blogs } from "#site/content";
 import { notFound } from "next/navigation";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { ArrowLeftIcon } from "lucide-react";
 import { cn } from "@/lib/utils";

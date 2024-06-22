@@ -1,7 +1,7 @@
 import { blogs } from "#velite";
 import { z } from "velite";
 import Picture from "@/components/picture";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 
 export default function BlogCard({
   blog,

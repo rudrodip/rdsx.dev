@@ -1,6 +1,6 @@
 import { projects } from "#velite";
 import { StepForward } from "lucide-react";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import Picture from "@/components/picture";
 import { IconMap } from "@/components/icon-map";
 import { z } from "velite";

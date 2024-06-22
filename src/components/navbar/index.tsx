@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import { navbarConfig } from "@/config/navbar.config";
 
 export default function Navbar() {
@@ -34,8 +34,8 @@ const NavItem = ({ children, url, className }: NavItemProps) => {
     <Link href={url}>
       <div
         className={cn(
-          "p-2 w-24 text-center hover:bg-secondary cursor-pointer border-t-[0.5px] bg-background",
-          active ? "current font-semibold" : "nav-item",
+          "p-2 min-w-16 lg:min-w-24 text-center hover:bg-secondary cursor-pointer border-t-[0.5px] bg-background transition-all duration-100 ease-out",
+          active ? "current hover:bg-background" : "nav-item",
           className
         )}
       >

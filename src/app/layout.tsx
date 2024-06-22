@@ -1,13 +1,12 @@
 import "@/styles/globals.css";
-import "@/styles/code.css"
+import "@/styles/code.css";
 import { Metadata } from "next/types";
 import { cn } from "@/lib/utils";
 import localFont from "next/font/local";
 import { siteConfig } from "@/config/site.config";
 import { ThemeProvider } from "@/components/theme/theme-provider";
-import { ViewTransitions } from "next-view-transitions";
-import { SpeedInsights } from "@vercel/speed-insights/next"
-import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 
@@ -73,16 +72,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <ViewTransitions>
-      <html lang="en" suppressHydrationWarning>
-        <body className={cn(fontHeading.variable, GeistSans.variable, GeistMono.variable)}>
-          <Analytics />
-          <SpeedInsights />
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
-            {children}
-          </ThemeProvider>
-        </body>
-      </html>
-    </ViewTransitions>
+    <html lang="en" suppressHydrationWarning>
+      <body
+        className={cn(
+          fontHeading.variable,
+          GeistSans.variable,
+          GeistMono.variable
+        )}
+      >
+        <Analytics />
+        <SpeedInsights />
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          {children}
+        </ThemeProvider>
+      </body>
+    </html>
   );
 }
