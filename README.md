@@ -29,8 +29,6 @@ You can check the live demo of this website [rdsx.dev![rdsx.dev](.github/assets/
 - **Deployment**: Vercel
 - **Analytics**: Vercel Analytics, Vercel Speed Analytics
 
-I'm using a [view transition api library](https://github.com/shuding/next-view-transitions) for this website. It's a simple and lightweight library that provides a smooth transition between pages by [Shu Ding](https://x.com/shuding_)
-
 ## Development
 
 ```bash
