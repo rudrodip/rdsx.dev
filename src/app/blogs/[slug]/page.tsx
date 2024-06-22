@@ -105,7 +105,7 @@ export default async function BlogPost({ params }: BlogPageParams) {
         image={blog.image}
         imageDark={blog.imageDark}
         alt={blog.title}
-        className="w-full rounded-xl"
+        className="w-full"
       />
 
       <div className="hidden text-sm min-[1400px]:inline-flex">
