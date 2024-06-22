@@ -17,7 +17,7 @@ export default function BlogCard({
           width={200}
           height={111}
           alt={blog.title}
-          className="w-full"
+          className="w-full aspect-[8/5] object-cover"
         />
         <div className="p-3">
           <h1 className="text-xl font-semibold font-heading">{blog.title}</h1>
