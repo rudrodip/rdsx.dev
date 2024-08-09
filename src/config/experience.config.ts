@@ -31,10 +31,11 @@ export const experiencesConfig: Experience[] = [
       "name": "Remote"
     },
     "start": "May 2024",
-    "end": "Present",
+    "end": "August 2024",
     "description": [
       "Developed the landing page of Leapflow",
-      "Currently working on the core product of Leapflow",
+      "Authentication flow & DB schema design",
+      "Layout development for the web faced product",
     ]
    },
   {
@@ -48,7 +49,7 @@ export const experiencesConfig: Experience[] = [
     start: "December, 2023",
     end: "February, 2024",
     description: [
-      "Currently adding more features to the web faced product of LunCo",
+      "Early tester & contributor of LunCo",
       "Developed the official website of LunCo",
     ],
   },
@@ -81,7 +82,7 @@ export const experiencesConfig: Experience[] = [
     start: "November, 2022",
     end: "December, 2023",
     description: [
-      "Managed the IT department of the club",
+      "Managed the IT sector of the club",
       "Built the official website of the club",
       "Supervised competitive programming under Rajshahi College National Science Fest 2023",
     ],
