@@ -4,18 +4,21 @@ import { getCalApi } from "@calcom/embed-react";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
+import { useTheme } from "next-themes";
 
 export function ScheduleCallPopup() {
+  const { theme } = useTheme();
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "meeting" });
       cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
+        theme: theme === "dark" ? "dark" : "light",
+        cssVarsPerTheme: { dark: { "--brand-color": "#000000" }, light: { "--brand-color": "#000000" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
     })();
-  }, []);
+  }, [theme]);
   return (
     <Button
       data-cal-namespace="meeting"
@@ -29,16 +32,18 @@ export function ScheduleCallPopup() {
 }
 
 export function ScheduleCallFloat() {
+  const { theme } = useTheme();
   useEffect(() => {
     (async function () {
       const cal = await getCalApi({ namespace: "meeting" });
       cal("ui", {
-        styles: { branding: { brandColor: "#000000" } },
+        theme: theme === "dark" ? "dark" : "light",
+        cssVarsPerTheme: { dark: { "--brand-color": "#000000" }, light: { "--brand-color": "#ffffff" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
     })();
-  }, []);
+  }, [theme]);
   return (
     <Button
       data-cal-namespace="meeting"

@@ -82,7 +82,7 @@ export default function RootLayout({
       >
         <Analytics />
         <SpeedInsights />
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light">
           {children}
         </ThemeProvider>
       </body>
