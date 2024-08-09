@@ -27,29 +27,41 @@ export default function Hero() {
       <h3 className="mt-2 text-lg">{portfolioConfig.tagline}</h3>
       <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
       <Socials />
-      <div className="mt-16 space-y-2 rounded-lg border-l-4 py-2 pl-4 max-w-2xl text-muted-foreground">
+      <div className="text-sm mt-16 space-y-2 rounded-lg border-l-4 py-2 pl-4 max-w-2xl text-muted-foreground">
         <p>
           <span className="font-semibold text-primary/90">Frontend:</span>{" "}
-          React, Next.js, Tailwindcss, Framer motion
-        </p>
-        <p>
-          <span className="font-semibold text-primary/90">Backend:</span>{" "}
-          Hono.js, Express.js, Fastapi, Fiber, Mux
-        </p>
-        <p>
-          <span className="font-semibold text-primary/90">Mobile:</span> React
-          Native, Expo, Flutter
-        </p>
-        <p>
-          <span className="font-semibold text-primary/90">Web3:</span> Solana,
-          Anchor, Solana Wallet Provider, Solana Mobile Wallet Provider
+          React, Next.js, TailwindCSS, SCSS, Framer motion, GSAP, Redux, Recoil, Zustand, SWR, Tanstack Query, Tanstack Router, React Hook Form, Jest, Vitest, Cypress, Playwright, Storybook, Headless UI, ShadCN UI
         </p>
         <p>
           <span className="font-semibold text-primary/90">
-            Microcontroller:
+            Javascript runtime:
           </span>{" "}
-          Arduino (UNO, Nano, Micro, Mini), ESP32, ESP8266 PlatformIO, Raspberry
-          Pi
+          Node.js, Bun, Deno, Edge runtime (Vercel), CF Worker
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Backend:</span>{" "}
+          Hono.js, Express.js, Fastapi, Flask, Go, Fiber, Mux
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Mobile:</span> React
+          Native, Expo, Flutter, RN MMKV, RN Reanimated, RN Gesture Handler, RN BLE, Flutter BLE
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Web3:</span> Solana,
+          Anchor, Solana Wallet Provider, Solana Mobile Wallet Provider,
+          Ethereum, Web3.js
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Firmware:</span> C,
+          C++, Rust, Python, Micropython
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Firmware IDE:</span>{" "}
+          Arduino IDE, PlatformIO, ROS
+        </p>
+        <p>
+          <span className="font-semibold text-primary/90">Hardware:</span>{" "}
+          Arduino (UNO, Nano, Micro, Mini), ESP32, ESP8266, Raspberry Pi Pico, Raspberry Pi (Zero, ZeroW, 3, 4) 
         </p>
       </div>
     </>
