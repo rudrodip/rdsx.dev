@@ -110,13 +110,13 @@
 }
 
 ::-moz-selection {
-  color: hsl(var(--accent));
-  background: hsl(var(--secondary));
+  color: hsl(var(--background));
+  background: hsl(var(--foreground));
 }
 
 ::selection {
-  color: hsl(var(--accent));
-  background: hsl(var(--secondary));
+  color: hsl(var(--background));
+  background: hsl(var(--foreground));
 }
 
 /* Tailwind style */
