@@ -70,7 +70,7 @@ const Experience = ({ experience }: { experience: ExperienceType }) => {
   return (
     <div>
       <div className="flex justify-between flex-wrap">
-        <p className="font-semibold">
+        <div className="font-semibold flex items-center gap-2">
           <a
             href={experience.company.url}
             target="_blank"
@@ -78,10 +78,13 @@ const Experience = ({ experience }: { experience: ExperienceType }) => {
           >
             {experience.company.name}
           </a>
-          <span className="text-xs px-2 py-1 ml-2 bg-secondary rounded">
+          <span className="text-xs px-2 py-1 bg-secondary rounded cursor-default">
+            {experience.employmentType}
+          </span>
+          <span className="text-xs px-2 py-1 bg-secondary rounded cursor-default">
             {experience.location.name}
           </span>
-        </p>
+        </div>
         <p className="text-muted-foreground text-xs">
           {experience.start} - {experience.end}
         </p>
