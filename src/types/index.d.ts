@@ -18,7 +18,6 @@ export type Site = {
 export type Portfolio = {
   name: string;
   tagline: string;
-  bio: string;
   resume: string;
   links: {
     twitter: string;
