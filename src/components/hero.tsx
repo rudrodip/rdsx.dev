@@ -24,13 +24,36 @@ export default function Hero() {
           <ThemeToggler />
         </div>
       </div>
-      <h3 className="mt-2 text-lg">{portfolioConfig.tagline}</h3>
-      <p className="my-6 max-w-2xl">{portfolioConfig.bio}</p>
+      <h3 className="mt-2 text-lg">
+        {portfolioConfig.tagline} <span className="sr-only">tagline</span>
+      </h3>
+      <p className="my-6 max-w-2xl text-foreground/80">
+        Hey 👋 RDS here! I&apos;m currently working as a software engineer at{" "}
+        <a
+          href="https://radicalhealth.in"
+          target="_blank"
+          className="text-foreground font-semibold hover:underline"
+        >
+          Radical Health
+        </a>
+        . I&apos;m also the founder of{" "}
+        <a
+          href="https://sonicrypt.rdsx.dev"
+          target="_blank"
+          className="text-foreground font-semibold hover:underline"
+        >
+          Sonicrypt
+        </a>{" "}
+        - world&apos;s first blockchain sonification device.
+        <span className="sr-only">bio</span>
+      </p>
       <Socials />
-      <div className="text-sm mt-10 md:mt-16 space-y-2 rounded max-w-2xl text-muted-foreground">
+      <div className="text-sm mt-10 space-y-2 rounded max-w-2xl text-foreground/70">
         <p>
           <span className="font-semibold text-primary/90">Frontend:</span>{" "}
-          React, Next.js, TailwindCSS, SCSS, Framer motion, GSAP, Redux, Recoil, Zustand, SWR, Tanstack Query, Tanstack Router, React Hook Form, Jest, Vitest, Cypress, Playwright, Storybook, Headless UI, ShadCN UI
+          React, Next.js, TailwindCSS, SCSS, Headless UI, ShadCN UI, Framer
+          motion, GSAP, Redux, Recoil, Zustand, SWR, Tanstack Query, Tanstack
+          Router, React Hook Form, Jest, Vitest, Cypress, Playwright, Storybook
         </p>
         <p>
           <span className="font-semibold text-primary/90">
@@ -44,7 +67,8 @@ export default function Hero() {
         </p>
         <p>
           <span className="font-semibold text-primary/90">Mobile:</span> React
-          Native, Expo, Flutter, RN MMKV, RN Reanimated, RN Gesture Handler, RN BLE, Flutter BLE
+          Native, Expo, Flutter, RN MMKV, RN Reanimated, RN Gesture Handler, RN
+          BLE, Flutter BLE
         </p>
         <p>
           <span className="font-semibold text-primary/90">Web3:</span> Solana,
@@ -61,7 +85,8 @@ export default function Hero() {
         </p>
         <p>
           <span className="font-semibold text-primary/90">Hardware:</span>{" "}
-          Arduino (UNO, Nano, Micro, Mini), ESP32, ESP8266, Raspberry Pi Pico, Raspberry Pi (Zero, ZeroW, 3, 4) 
+          Arduino (UNO, Nano, Micro, Mini), ESP32, ESP8266, Raspberry Pi Pico,
+          Raspberry Pi (Zero, ZeroW, 3, 4)
         </p>
       </div>
     </>
