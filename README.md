@@ -22,6 +22,7 @@ You can check the live demo of this website [rdsx.dev![rdsx.dev](.github/assets/
 - **Language**: TypeScript
 - **Framework**: Next 14 (app router)
 - **Styling**: Tailwind CSS
+- **UI Library**: ShadCN UI
 - **Content**: MDX
 - **Content Management**: Github
 - **Content Generation**: [Velite](https://velite.js.org/)
