@@ -11,7 +11,7 @@ type ProjectCardProps = {
 
 export default function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex p-3 justify-between gap-2 rounded-2xl border overflow-hidden">
+    <div className="flex p-3 justify-between gap-2 rounded-xl border overflow-hidden">
       <div className="space-y-2 w-full tablet:w-3/5">
         <Link href={`/projects/${project.slugAsParams}`} className="space-y-2 group/link">
           <div className="inline-flex items-center gap-1">
