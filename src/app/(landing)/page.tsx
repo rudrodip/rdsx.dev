@@ -138,7 +138,6 @@ export default function Home() {
                 <FormControl>
                   <Input
                     className="rounded-lg rounded-r-none current focus-visible:ring-0 bg-secondary/20 backdrop-blur-md"
-                    autoFocus
                     placeholder="search projects"
                     {...field}
                   />
