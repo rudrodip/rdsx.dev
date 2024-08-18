@@ -46,18 +46,16 @@ export default function Home() {
   const { query, type, sort } = form.watch();
 
   const fetchGithubRepos = useCallback(async () => {
-    if (type === "Github" && githubProjects.length === 0) {
-      setLoading(true);
-      try {
-        const repos = await getRepos();
-        setGithubProjects(repos);
-      } catch (error) {
-        console.error("Failed to fetch GitHub repos:", error);
-      } finally {
-        setLoading(false);
-      }
+    setLoading(true);
+    try {
+      const repos = await getRepos();
+      setGithubProjects(repos);
+    } catch (error) {
+      console.error("Failed to fetch GitHub repos:", error);
+    } finally {
+      setLoading(false);
     }
-  }, [type, githubProjects.length]);
+  }, []);
 
   React.useEffect(() => {
     fetchGithubRepos();
@@ -96,7 +94,7 @@ export default function Home() {
   }, [type, query, sortedFeaturedProjects, sortedGithubProjects]);
 
   const renderProjects = useCallback(() => {
-    if (loading) {
+    if (loading && type === "Github") {
       return (
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-3">
           {Array(12)
@@ -129,7 +127,7 @@ export default function Home() {
   return (
     <section className="w-full space-y-6 mt-6">
       <Form {...form}>
-        <form className="w-full flex items-center nav-container sticky top-12 z-20">
+        <form className="w-full flex items-center nav-container sticky top-14 z-20">
           <FormField
             control={form.control}
             name="query"
@@ -137,8 +135,9 @@ export default function Home() {
               <FormItem className="w-full">
                 <FormControl>
                   <Input
-                    className="rounded-lg rounded-r-none current focus-visible:ring-0 bg-secondary/20 backdrop-blur-md"
+                    className="rounded-lg rounded-r-none current focus-visible:ring-0 bg-background backdrop-blur-md"
                     placeholder="search projects"
+                    autoComplete="off"
                     {...field}
                   />
                 </FormControl>
