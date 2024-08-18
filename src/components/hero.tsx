@@ -56,7 +56,7 @@ export default function Hero() {
         </p>
         <Socials />
       </div>
-      <div className="text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-5">
+      <div className="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-5">
         {skillsConfig.map((skill) => (
           <p key={skill.category}>
             <span className="font-semibold text-primary/90">

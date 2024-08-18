@@ -70,7 +70,7 @@ const Experience = ({ experience }: { experience: ExperienceType }) => {
   return (
     <div>
       <div className="flex justify-between flex-wrap">
-        <div className="font-semibold flex items-center gap-2">
+        <div className="font-semibold flex flex-wrap items-center gap-1 md:gap-2">
           <a
             href={experience.company.url}
             target="_blank"

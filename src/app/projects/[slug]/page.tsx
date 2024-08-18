@@ -102,9 +102,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             width={600}
             height={400}
             alt={project.title}
-            className="border border-b-8 rounded-xl mx-auto"
+            className="border rounded-xl mx-auto"
           />
-          <h1 className="head-text-sm p-1 mt-6 mb-4">{project.title}</h1>
+          <h1 className="head-text-sm py-1 mt-6 mb-4">{project.title}</h1>
           <div className="mb-8">
             <div className="flex flex-wrap items-center gap-2 mb-4">
               {project.links.map((link, i) => (
@@ -132,7 +132,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               ))}
             </div>
           </div>
-          <p className="border-l-4 rounded p-1 pl-3 mb-4">
+          <p className="rounded mb-4">
             {project.description}
           </p>
         </div>
