@@ -14,6 +14,7 @@ export const experiencesConfig: Experience[] = [
     start: "August 2024",
     end: "Present",
     description: [
+      "Realtime AI orchestration pipeline development",
       "Working on large scale Data Visualization",
     ],
   },
