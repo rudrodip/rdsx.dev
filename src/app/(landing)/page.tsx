@@ -125,7 +125,7 @@ export default function Home() {
   }, [type, filteredProjects, loading]);
 
   return (
-    <section className="w-full space-y-6 mt-6">
+    <section className="w-full space-y-6 mt-5">
       <Form {...form}>
         <form className="w-full flex items-center nav-container sticky top-14 z-20">
           <FormField
