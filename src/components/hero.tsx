@@ -39,7 +39,7 @@ export default function Hero() {
         </a>
         . I&apos;m also the founder of{" "}
         <a
-          href="https://sonicrypt.rdsx.dev"
+          href="https://sonicrypt.org"
           target="_blank"
           className="text-foreground font-semibold hover:underline"
         >

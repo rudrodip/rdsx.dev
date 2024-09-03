@@ -23,7 +23,7 @@ export const experiencesConfig: Experience[] = [
     employmentType: "Part-time",
     company: {
       name: "Sonicrypt",
-      url: "https://sonicrypt.rdsx.dev",
+      url: "https://sonicrypt.org",
     },
     location: {
       name: "On site",
