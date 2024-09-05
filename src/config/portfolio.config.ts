@@ -3,7 +3,7 @@ import type { Portfolio } from "@/types";
 export const portfolioConfig: Portfolio = {
   name: "Rudro Dip Sarker",
   tagline: "I gaslight rocks 🪨 to think 🧠",
-  resume: "https://drive.google.com/file/d/1IZrep-b2l6rbyY3cgvJjbrI2Qa8kmugN/view?usp=drive_link",
+  resume: "https://drive.google.com/file/d/1HEX_TzOW2YgVPsBTcHtsxiVTT7xz-f7M/view?usp=sharing",
   links: {
     github: "https://github.com/rudrodip",
     twitter: "https://x.com/rds_agi",
