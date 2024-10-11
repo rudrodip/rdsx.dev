@@ -29,26 +29,28 @@ export default function Hero() {
         {portfolioConfig.tagline} <span className="sr-only">tagline</span>
       </h3>
       <p className="my-6 max-w-2xl text-foreground/80">
-        Hey 👋 RDS here! I&apos;m currently working as a software engineer at{" "}
+        I&apos;m currently working as a .NET Developer at{" "}
         <a
-          href="https://radicalhealth.in"
+          href="https://Idontwannasay.in"
           target="_blank"
           className="text-foreground font-semibold hover:underline"
         >
-          Radical Health
+          super exciting
         </a>
-        . I&apos;m also the founder of{" "}
+        &nbsp;MNC because spending my days writing code is the dream, right?
+        I&apos;m also the founder of{" "}
         <a
-          href="https://sonicrypt.org"
+          href="/"
           target="_blank"
           className="text-foreground font-semibold hover:underline"
         >
-          Sonicrypt
+          Me
         </a>{" "}
-        - world&apos;s first blockchain sonification device.
+        - where I share just how confused I am about life. Good Times!
         <span className="sr-only">bio</span>
       </p>
       <Socials />
+      <div className="border-t-[0.8px] mt-[2rem]"></div>
       <div className="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">
         {skillsConfig.map((skill) => (
           <p key={skill.category}>

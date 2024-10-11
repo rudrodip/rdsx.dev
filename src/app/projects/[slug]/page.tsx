@@ -75,7 +75,7 @@ export async function generateStaticParams(): Promise<
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const project = getProjectFromParam(params);
-  
+
   if (!project) {
     notFound();
   }
@@ -83,7 +83,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl sm:border flex flex-wrap justify-between lg:divide-x">
-        <div className="relative w-full lg:w-2/5 p-2 md:p-8">
+        <div className="relative w-full lg:w-2/5 p-2 md:p-8 lg:h-full lg:overflow-y-scroll">
           <div className="flex justify-between mb-2">
             <Link href="/" className="group/back text-xs">
               <ArrowLeft
@@ -132,9 +132,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               ))}
             </div>
           </div>
-          <p className="rounded mb-4">
-            {project.description}
-          </p>
+          <p className="rounded mb-4">{project.description}</p>
         </div>
         <div
           id="tab-section"

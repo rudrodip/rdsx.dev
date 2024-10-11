@@ -11,7 +11,7 @@ export default function BlogSection() {
   return (
     <main className="relative w-full lg:h-screen p-0 sm:p-5">
       <div className="w-full h-full rounded-2xl lg:border flex flex-wrap justify-between lg:divide-x">
-        <div className="hidden lg:block w-full lg:w-2/5 p-2 md:p-8">
+        <div className="w-full lg:w-2/5 p-2 md:p-8 lg:h-full lg:overflow-y-scroll">
           <Hero />
         </div>
         <div
