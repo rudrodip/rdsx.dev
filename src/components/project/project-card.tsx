@@ -25,7 +25,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
               <StepForward size={12} />
             </span>
           </div>
-          <p className="text-sm text-muted-foreground max-w-2xl">
+          <p className="text-sm text-secondary-foreground/80 font-light max-w-2xl">
             {project.description}
           </p>
         </Link>
@@ -33,7 +33,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           {project.tags.map((tag) => (
             <p
               key={tag}
-              className="px-2 py-1 rounded bg-muted text-xs cursor-pointer"
+              className="px-2 py-1 rounded bg-muted text-muted-foreground text-xs cursor-pointer"
             >
               {tag}
             </p>
