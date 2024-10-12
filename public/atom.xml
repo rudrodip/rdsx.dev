@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://rdsx.dev</id>
-    <title>Blogs | rdsx.dev</title>
-    <updated>2024-06-19T18:13:50.648Z</updated>
+    <title>Blogs</title>
+    <updated>2024-10-12T02:56:51.043Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://rdsx.dev"/>
     <link rel="self" href="https://rdsx.dev/atom.xml"/>

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
     <channel>
-        <title>Blogs | rdsx.dev</title>
+        <title>Blogs</title>
         <link>https://rdsx.dev</link>
         <description>Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!</description>
-        <lastBuildDate>Wed, 19 Jun 2024 18:13:50 GMT</lastBuildDate>
+        <lastBuildDate>Sat, 12 Oct 2024 02:56:51 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
-            <title>Blogs | rdsx.dev</title>
+            <title>Blogs</title>
             <url>https://rdsx.dev/logo.png</url>
             <link>https://rdsx.dev</link>
         </image>
