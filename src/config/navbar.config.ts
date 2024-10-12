@@ -2,8 +2,12 @@ import { NavItem } from "@/types";
 
 export const navbarConfig: NavItem[] = [
   {
-    title: "Projects",
+    title: "Letters",
     url: "/",
+  },
+  {
+    title: "Projects",
+    url: "/projects",
   },
   {
     title: "Experience",
@@ -12,9 +16,5 @@ export const navbarConfig: NavItem[] = [
   {
     title: "TIL",
     url: "/til",
-  },
-  {
-    title: "Letters",
-    url: "/letters",
   },
 ];
