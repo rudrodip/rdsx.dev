@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useMemo, useCallback, useState } from "react";
+import React, { useMemo, useCallback, useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -57,7 +57,7 @@ export default function Home() {
     }
   }, []);
 
-  React.useEffect(() => {
+  useEffect(() => {
     fetchGithubRepos();
   }, [fetchGithubRepos]);
 
@@ -146,11 +146,47 @@ export default function Home() {
             )}
           />
           <div className="flex items-center">
-            {["type", "sort"].map((fieldName) => (
+            <FormField
+              control={form.control}
+              name="type"
+              render={({ field }) => (
+                <FormItem>
+                  <Select
+                    onValueChange={field.onChange}
+                    defaultValue={field.value}
+                  >
+                    <FormControl>
+                      <SelectTrigger
+                        className={cn(
+                          "p-2 min-w-16 lg:min-w-24 text-center text-sm hover:bg-secondary cursor-pointer border-0 border-t-[0.5px] bg-background transition-all duration-100 ease-out",
+                          "nav-item hover:bg-background rounded-none gap-1",
+                          type === "Featured" && "rounded-r-lg"
+                        )}
+                      >
+                        {field.value}
+                      </SelectTrigger>
+                    </FormControl>
+                    <SelectContent
+                      ref={(ref) =>
+                        // temporary workaround from https://github.com/shadcn-ui/ui/issues/1220
+                        ref?.addEventListener(
+                          "touchend",
+                          (e) => e.preventDefault()
+                        )
+                      }
+                    >
+                      <SelectItem value="Featured">Featured</SelectItem>
+                      <SelectItem value="Github">Github</SelectItem>
+                    </SelectContent>
+                  </Select>
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
+            {type === "Github" && (
               <FormField
-                key={fieldName}
                 control={form.control}
-                name={fieldName as "type" | "sort"}
+                name="sort"
                 render={({ field }) => (
                   <FormItem>
                     <Select
@@ -162,33 +198,32 @@ export default function Home() {
                           className={cn(
                             "p-2 min-w-16 lg:min-w-24 text-center text-sm hover:bg-secondary cursor-pointer border-0 border-t-[0.5px] bg-background transition-all duration-100 ease-out",
                             "nav-item hover:bg-background rounded-none gap-1",
-                            fieldName === "sort" && "rounded-r-lg"
+                            "rounded-r-lg"
                           )}
                         >
                           {field.value}
                         </SelectTrigger>
                       </FormControl>
-                      <SelectContent>
-                        {fieldName === "type" ? (
-                          <>
-                            <SelectItem value="Featured">Featured</SelectItem>
-                            <SelectItem value="Github">Github</SelectItem>
-                          </>
-                        ) : (
-                          <>
-                            <SelectItem value="Last updated">
-                              Last updated
-                            </SelectItem>
-                            <SelectItem value="Stars">Stars</SelectItem>
-                          </>
-                        )}
+                      <SelectContent
+                        ref={(ref) =>
+                          // temporary workaround from https://github.com/shadcn-ui/ui/issues/1220
+                          ref?.addEventListener(
+                            "touchend",
+                            (e) => e.preventDefault()
+                          )
+                        }
+                      >
+                        <SelectItem value="Last updated">
+                          Last updated
+                        </SelectItem>
+                        <SelectItem value="Stars">Stars</SelectItem>
                       </SelectContent>
                     </Select>
                     <FormMessage />
                   </FormItem>
                 )}
               />
-            ))}
+            )}
           </div>
         </form>
       </Form>
@@ -202,7 +237,7 @@ const GithubRepo = React.memo(({ repo }: { repo: any }) => (
     href={repo.html_url}
     target="_blank"
     rel="noopener noreferrer"
-    className="w-full h-full min-h-[90px] flex flex-col rounded-lg p-2 border text-sm hover:shadow-md"
+    className="w-full h-full min-h-[90px] flex flex-col rounded-lg p-2 border text-sm hover:bg-muted/50 duration-100 transition-all ease-in-out"
   >
     <h1>{repo.name}</h1>
     <p className="flex-1 text-xs text-muted-foreground">{repo.description}</p>
