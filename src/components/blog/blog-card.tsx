@@ -1,4 +1,4 @@
-import { blogs } from "#velite";
+import { letters } from "#velite";
 import { z } from "velite";
 import Picture from "@/components/picture";
 import Link from "next/link";
@@ -6,10 +6,10 @@ import Link from "next/link";
 export default function BlogCard({
   blog,
 }: {
-  blog: z.infer<typeof blogs.schema>;
+  blog: z.infer<typeof letters.schema>;
 }) {
   return (
-    <Link href={`/blogs/${blog.slugAsParams}`}>
+    <Link href={`/letters/${blog.slugAsParams}`}>
       <div className="w-full h-full max-w-lg rounded-xl overflow-hidden border hover:border-primary duration-100 transition-all ease-in-out">
         <Picture
           image={blog.image}
@@ -35,10 +35,13 @@ export default function BlogCard({
             {blog.description}
           </p>
           <div className="w-full flex justify-end">
-
-          <p className="text-xs text-muted-foreground mt-2 px-2 py-1 rounded bg-secondary">
-            {new Date(blog.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
-          </p>
+            <p className="text-xs text-muted-foreground mt-2 px-2 py-1 rounded bg-secondary">
+              {new Date(blog.date).toLocaleDateString("en-US", {
+                year: "numeric",
+                month: "long",
+                day: "numeric",
+              })}
+            </p>
           </div>
         </div>
       </div>

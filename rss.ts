@@ -1,6 +1,6 @@
 import { Feed } from "feed";
 import { siteConfig } from "@/config/site.config";
-import { blogs } from "#site/content";
+import { letters } from "#site/content";
 import fs from "fs";
 
 export default async function generateRssFeed() {
@@ -10,7 +10,7 @@ export default async function generateRssFeed() {
       : siteConfig.siteUrl;
 
   const feedOptions = {
-    title: `Blogs | ${siteConfig.name}`,
+    title: `Letters | ${siteConfig.name}`,
     description:
       "Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.",
     id: site_url,
@@ -31,13 +31,13 @@ export default async function generateRssFeed() {
 
   const feed = new Feed(feedOptions);
 
-  blogs.map((blog) => {
+  letters.map((letter) => {
     feed.addItem({
-      title: blog.title,
-      description: blog.description,
-      link: `${site_url}/blogs/${blog.slugAsParams}`,
-      guid: blog.slugAsParams,
-      date: new Date(blog.date),
+      title: letter.title,
+      description: letter.description,
+      link: `${site_url}/blogs/${letter.slugAsParams}`,
+      guid: letter.slugAsParams,
+      date: new Date(letter.date),
     });
   });
 

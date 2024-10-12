@@ -14,7 +14,7 @@ export const navbarConfig: NavItem[] = [
     url: "/til",
   },
   {
-    title: "Blog",
-    url: "/blogs",
+    title: "Letters",
+    url: "/letters",
   },
 ];

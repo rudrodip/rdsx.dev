@@ -1,10 +1,10 @@
-import { blogs } from "#site/content";
+import { letters } from "#site/content";
 import BlogCard from "@/components/blog/blog-card";
 import Hero from "@/components/hero";
 import Navbar from "@/components/navbar";
 
 export default function BlogSection() {
-  const sortedBlogs = blogs.sort((a, b) => {
+  const sortedLetters = letters.sort((a, b) => {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
@@ -20,8 +20,8 @@ export default function BlogSection() {
         >
           <Navbar />
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-8">
-            {sortedBlogs.map((blog) => (
-              <BlogCard key={blog.title} blog={blog} />
+            {sortedLetters.map((letter) => (
+              <BlogCard key={letter.title} blog={letter} />
             ))}
           </div>
         </div>

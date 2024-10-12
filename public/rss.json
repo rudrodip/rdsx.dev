@@ -1,19 +1,19 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Blogs | rdsx.dev",
-    "home_page_url": "https://rdsx.dev",
-    "feed_url": "https://rdsx.dev/rss.json",
-    "description": "Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!",
-    "icon": "https://rdsx.dev/logo.png",
+    "title": "Letters | jagadeshronanki.com",
+    "home_page_url": "https://jagadeshronanki.com",
+    "feed_url": "https://jagadeshronanki.com/rss.json",
+    "description": "Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.",
+    "icon": "https://jagadeshronanki.com/logo.png",
     "items": [
         {
-            "url": "https://rdsx.dev/blogs/buildspace-os-mod",
+            "url": "https://jagadeshronanki.com/blogs/buildspace-os-mod",
             "title": "I modded the Buildspace OS",
             "summary": "A journey of me modding the buildspace os chrome extension to customize the look",
             "date_modified": "2024-06-20T00:00:00.000Z"
         },
         {
-            "url": "https://rdsx.dev/blogs/on-scroll-playback",
+            "url": "https://jagadeshronanki.com/blogs/on-scroll-playback",
             "title": "On scroll video playback effect",
             "summary": "Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs",
             "date_modified": "2024-06-17T00:00:00.000Z"

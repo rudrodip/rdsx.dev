@@ -1,4 +1,4 @@
-import { blogs } from "#site/content";
+import { letters } from "#site/content";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
@@ -18,7 +18,7 @@ type BlogPageParams = {
 
 function getBlogFromParam(params: { slug: string }) {
   const slug = params.slug;
-  const blog = blogs.find((blog) => blog.slugAsParams === slug);
+  const blog = letters.find((blog) => blog.slugAsParams === slug);
 
   if (!blog) {
     null;
@@ -37,7 +37,7 @@ export async function generateMetadata({
 
   const ogUrl = new URL(`${siteConfig.siteUrl}${blog.image.src}`);
   ogUrl.searchParams.set("heading", blog.title);
-  ogUrl.searchParams.set("type", "Blog Post");
+  ogUrl.searchParams.set("type", "Letter Post");
   ogUrl.searchParams.set("mode", "dark");
 
   return {
@@ -48,7 +48,7 @@ export async function generateMetadata({
       title: `${blog.title} | ${siteConfig.name} | ${siteConfig.creator.name}`,
       description: blog.description,
       type: "article",
-      url: `${siteConfig.siteUrl}/blogs/${blog.slugAsParams}`,
+      url: `${siteConfig.siteUrl}/letters/${blog.slugAsParams}`,
       images: [
         {
           url: ogUrl.toString(),
@@ -70,7 +70,7 @@ export async function generateMetadata({
 export async function generateStaticParams(): Promise<
   BlogPageParams["params"][]
 > {
-  return blogs.map((blog) => ({
+  return letters.map((blog) => ({
     slug: blog.slugAsParams,
   }));
 }
@@ -84,14 +84,14 @@ export default async function BlogPost({ params }: BlogPageParams) {
   return (
     <article className="relative max-w-3xl px-2 lg:px-0 py-6 lg:py-16">
       <Link
-        href="/blogs"
+        href="/letters"
         className={cn(
           buttonVariants({ variant: "ghost" }),
-          "absolute left-[-200px] top-14 hidden lg:inline-flex"
+          "absolute left-[-200px] top-14 hidden lg:inline-flex",
         )}
       >
         <ArrowLeftIcon className="mr-2 h-4 w-4" />
-        See all blogs
+        See all letters
       </Link>
       <p className="px-2 py-1 rounded text-xs bg-secondary inline-block">
         {new Date(blog.date).toLocaleString("en-US", {
@@ -119,11 +119,11 @@ export default async function BlogPost({ params }: BlogPageParams) {
       </div>
       <div className="flex justify-center py-6 lg:py-10">
         <Link
-          href="/blogs"
+          href="/letters"
           className={cn(buttonVariants({ variant: "ghost" }))}
         >
           <ArrowLeftIcon className="mr-2 h-4 w-4" />
-          See all blogs
+          See all letters
         </Link>
       </div>
     </article>

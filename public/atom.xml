@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://rdsx.dev</id>
-    <title>Blogs | rdsx.dev</title>
-    <updated>2024-06-19T18:13:50.648Z</updated>
+    <id>https://jagadeshronanki.com</id>
+    <title>Letters | jagadeshronanki.com</title>
+    <updated>2024-10-12T03:43:33.618Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://rdsx.dev"/>
-    <link rel="self" href="https://rdsx.dev/atom.xml"/>
-    <subtitle>Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!</subtitle>
-    <logo>https://rdsx.dev/logo.png</logo>
-    <icon>https://rdsx.dev/favicon.png</icon>
-    <rights>All rights reserved 2024, Rudro Dip Sarker</rights>
+    <link rel="alternate" href="https://jagadeshronanki.com"/>
+    <link rel="self" href="https://jagadeshronanki.com/atom.xml"/>
+    <subtitle>Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.</subtitle>
+    <logo>https://jagadeshronanki.com/logo.png</logo>
+    <icon>https://jagadeshronanki.com/favicon.png</icon>
+    <rights>All rights reserved 2024, Jagadesh Ronanki</rights>
     <entry>
         <title type="html"><![CDATA[I modded the Buildspace OS]]></title>
-        <id>https://rdsx.dev/blogs/buildspace-os-mod</id>
-        <link href="https://rdsx.dev/blogs/buildspace-os-mod"/>
+        <id>https://jagadeshronanki.com/blogs/buildspace-os-mod</id>
+        <link href="https://jagadeshronanki.com/blogs/buildspace-os-mod"/>
         <updated>2024-06-20T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[A journey of me modding the buildspace os chrome extension to customize the look]]></summary>
     </entry>
     <entry>
         <title type="html"><![CDATA[On scroll video playback effect]]></title>
-        <id>https://rdsx.dev/blogs/on-scroll-playback</id>
-        <link href="https://rdsx.dev/blogs/on-scroll-playback"/>
+        <id>https://jagadeshronanki.com/blogs/on-scroll-playback</id>
+        <link href="https://jagadeshronanki.com/blogs/on-scroll-playback"/>
         <updated>2024-06-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs]]></summary>
     </entry>

@@ -20,10 +20,10 @@ export const experiencesConfig: Experience[] = [
     ],
   },
   {
-    title: "Smart Contract Security Researcher - JrNet",
+    title: "Smart Contract Security Researcher",
     employmentType: "Self-Employed",
     company: {
-      name: "Codehawks, Code4rena",
+      name: "JrNet",
       url: "https://umspaces.vercel.app/",
     },
     location: {
@@ -73,7 +73,7 @@ export const experiencesConfig: Experience[] = [
     description: [
       "Managed UI",
       "Built the official website of the dsscoders",
-      "Fun-Fact: I have no experience with react then but got bonous amt for my work",
+      "Fun-Fact: I have no experience with react then but got bonus amt for my work",
       "Takeaway: Learn by doing... It's possible",
     ],
   },
@@ -81,7 +81,7 @@ export const experiencesConfig: Experience[] = [
     title: "Bug Bounty Hunter",
     employmentType: "Self-Employed",
     company: {
-      name: "Hackerone, Intigriti",
+      name: "0xrj",
       url: "https://0xdln1.github.io/Application-Level-DoS-mastodon/",
     },
     location: {
