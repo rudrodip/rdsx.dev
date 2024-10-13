@@ -1,13 +1,13 @@
 {
     "version": "https://jsonfeed.org/version/1",
     "title": "Letters | jagadeshronanki.com",
-    "home_page_url": "https://jagadeshronanki.com",
-    "feed_url": "https://jagadeshronanki.com/rss.json",
+    "home_page_url": "https://jagadeshronanki.vercel.app",
+    "feed_url": "https://jagadeshronanki.vercel.app/rss.json",
     "description": "Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.",
-    "icon": "https://jagadeshronanki.com/logo.png",
+    "icon": "https://jagadeshronanki.vercel.app/logo.png",
     "items": [
         {
-            "url": "https://jagadeshronanki.com/blogs/game-you-didnot-chose",
+            "url": "https://jagadeshronanki.vercel.app/blogs/game-you-didnot-chose",
             "title": "The Game You didn't Chose",
             "summary": "Are Status, Wealth, Awareness and Greed threat to humanity? let's discuss.",
             "date_modified": "2024-06-17T00:00:00.000Z"

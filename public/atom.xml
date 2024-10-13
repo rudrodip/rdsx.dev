@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://jagadeshronanki.com</id>
+    <id>https://jagadeshronanki.vercel.app</id>
     <title>Letters | jagadeshronanki.com</title>
-    <updated>2024-10-13T08:55:12.635Z</updated>
+    <updated>2024-10-13T09:00:43.745Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://jagadeshronanki.com"/>
-    <link rel="self" href="https://jagadeshronanki.com/atom.xml"/>
+    <link rel="alternate" href="https://jagadeshronanki.vercel.app"/>
+    <link rel="self" href="https://jagadeshronanki.vercel.app/atom.xml"/>
     <subtitle>Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.</subtitle>
-    <logo>https://jagadeshronanki.com/logo.png</logo>
-    <icon>https://jagadeshronanki.com/favicon.png</icon>
+    <logo>https://jagadeshronanki.vercel.app/logo.png</logo>
+    <icon>https://jagadeshronanki.vercel.app/favicon.png</icon>
     <rights>All rights reserved 2024, Jagadesh Ronanki</rights>
     <entry>
         <title type="html"><![CDATA[The Game You didn't Chose]]></title>
-        <id>https://jagadeshronanki.com/blogs/game-you-didnot-chose</id>
-        <link href="https://jagadeshronanki.com/blogs/game-you-didnot-chose"/>
+        <id>https://jagadeshronanki.vercel.app/blogs/game-you-didnot-chose</id>
+        <link href="https://jagadeshronanki.vercel.app/blogs/game-you-didnot-chose"/>
         <updated>2024-06-17T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Are Status, Wealth, Awareness and Greed threat to humanity? let's discuss.]]></summary>
     </entry>

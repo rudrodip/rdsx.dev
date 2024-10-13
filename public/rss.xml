@@ -2,20 +2,20 @@
 <rss version="2.0">
     <channel>
         <title>Letters | jagadeshronanki.com</title>
-        <link>https://jagadeshronanki.com</link>
+        <link>https://jagadeshronanki.vercel.app</link>
         <description>Hi, I’m Jagadesh Ronanki. I’m nobody, just like you, and I help you recognize that. In a society fixated on status and wealth, I challenge the notion that they hold any real value. I believe that awareness and introspection are the keys to understanding our place in this world. Let's explore the idea that greed and ambition aren't the real threats to humanity, but rather the distractions that keep us from our true selves.</description>
-        <lastBuildDate>Sun, 13 Oct 2024 08:55:12 GMT</lastBuildDate>
+        <lastBuildDate>Sun, 13 Oct 2024 09:00:43 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
             <title>Letters | jagadeshronanki.com</title>
-            <url>https://jagadeshronanki.com/logo.png</url>
-            <link>https://jagadeshronanki.com</link>
+            <url>https://jagadeshronanki.vercel.app/logo.png</url>
+            <link>https://jagadeshronanki.vercel.app</link>
         </image>
         <copyright>All rights reserved 2024, Jagadesh Ronanki</copyright>
         <item>
             <title><![CDATA[The Game You didn't Chose]]></title>
-            <link>https://jagadeshronanki.com/blogs/game-you-didnot-chose</link>
+            <link>https://jagadeshronanki.vercel.app/blogs/game-you-didnot-chose</link>
             <guid>game-you-didnot-chose</guid>
             <pubDate>Mon, 17 Jun 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Are Status, Wealth, Awareness and Greed threat to humanity? let's discuss.]]></description>
