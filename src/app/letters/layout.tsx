@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     images: [
       {
-        url: `${siteConfig.siteUrl}/letter-og.png`,
+        url: `${siteConfig.siteUrl}/blog-og.png`,
         width: 1800,
         height: 1000,
         alt: siteConfig.name,
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     description:
       "Letters | jagadeshronanki.com | Welcome to my little corner of the internet, where I’m here to talk and mock you all. Just a nobody trying to make sense of it all — join me if you dare.",
     images: {
-      url: `${siteConfig.siteUrl}/letter-og.png`,
+      url: `${siteConfig.siteUrl}/blog-og.png`,
       width: 1800,
       height: 1000,
       alt: `Letters | ${siteConfig.name}`,
