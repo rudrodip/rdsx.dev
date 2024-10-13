@@ -47,7 +47,7 @@ export const siteConfig: Site = {
     "coding",
     "tech blog",
   ],
-  siteUrl: "https://jagadeshronanki.vercel.app",
+  siteUrl: "https://jagadeshronanki.com",
   creator: {
     name: "Jagadesh Ronanki",
     url: "https://jagadeshronanki.com",
