@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://jagadeshronanki.com</id>
     <title>Letters | jagadeshronanki.com</title>
-    <updated>2024-10-12T03:43:33.618Z</updated>
+    <updated>2024-10-13T08:55:12.635Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://jagadeshronanki.com"/>
     <link rel="self" href="https://jagadeshronanki.com/atom.xml"/>
@@ -11,17 +11,10 @@
     <icon>https://jagadeshronanki.com/favicon.png</icon>
     <rights>All rights reserved 2024, Jagadesh Ronanki</rights>
     <entry>
-        <title type="html"><![CDATA[I modded the Buildspace OS]]></title>
-        <id>https://jagadeshronanki.com/blogs/buildspace-os-mod</id>
-        <link href="https://jagadeshronanki.com/blogs/buildspace-os-mod"/>
-        <updated>2024-06-20T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[A journey of me modding the buildspace os chrome extension to customize the look]]></summary>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[On scroll video playback effect]]></title>
-        <id>https://jagadeshronanki.com/blogs/on-scroll-playback</id>
-        <link href="https://jagadeshronanki.com/blogs/on-scroll-playback"/>
+        <title type="html"><![CDATA[The Game You didn't Chose]]></title>
+        <id>https://jagadeshronanki.com/blogs/game-you-didnot-chose</id>
+        <link href="https://jagadeshronanki.com/blogs/game-you-didnot-chose"/>
         <updated>2024-06-17T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Let's create an on scroll video playback effect using ffmpeg, framer-motion & nextjs]]></summary>
+        <summary type="html"><![CDATA[Are Status, Wealth, Awareness and Greed threat to humanity? let's discuss.]]></summary>
     </entry>
 </feed>
