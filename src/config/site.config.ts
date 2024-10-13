@@ -47,12 +47,12 @@ export const siteConfig: Site = {
     "coding",
     "tech blog",
   ],
-  siteUrl: "https://jagadeshronanki.com",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL || "https://jagadeshronanki.vercel.app",
   creator: {
     name: "Jagadesh Ronanki",
-    url: "https://jagadeshronanki.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://jagadeshronanki.vercel.app",
   },
-  ogImage: "https://jagadeshronanki.com/og.png",
+  ogImage: (process.env.NEXT_PUBLIC_SITE_URL || "https://jagadeshronanki.vercel.app") + "/og.png",
   links: {
     x: "https://x.com/jagadeshronanki",
     github: "https://github.com/jagadesh-ronanki",
