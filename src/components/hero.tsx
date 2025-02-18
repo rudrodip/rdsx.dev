@@ -29,24 +29,7 @@ export default function Hero() {
         {portfolioConfig.tagline} <span className="sr-only">tagline</span>
       </h3>
       <p className="my-6 max-w-2xl text-foreground/80">
-        Hey 👋 RDS here! I&apos;m currently working as a software engineer at{" "}
-        <a
-          href="https://radicalhealth.in"
-          target="_blank"
-          className="text-foreground font-semibold hover:underline"
-        >
-          Radical Health
-        </a>
-        . I&apos;m also the founder of{" "}
-        <a
-          href="https://sonicrypt.org"
-          target="_blank"
-          className="text-foreground font-semibold hover:underline"
-        >
-          Sonicrypt
-        </a>{" "}
-        - world&apos;s first blockchain sonification device.
-        <span className="sr-only">bio</span>
+        Hey 👋 RDS here! I build stuff
       </p>
       <Socials />
       <div className="hidden md:flex flex-col text-sm space-y-2 rounded max-w-2xl text-foreground/70 my-7">

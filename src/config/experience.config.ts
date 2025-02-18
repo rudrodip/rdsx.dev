@@ -12,8 +12,9 @@ export const experiencesConfig: Experience[] = [
       name: "Remote",
     },
     start: "August 2024",
-    end: "Present",
+    end: "February 2025",
     description: [
+      "Built ME&T Platform thats operational on production",
       "Realtime AI orchestration pipeline development",
       "Working on large scale Data Visualization",
     ],
