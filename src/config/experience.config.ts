@@ -3,6 +3,24 @@ import type { Experience } from "@/types";
 export const experiencesConfig: Experience[] = [
   {
     title: "Software Engineer",
+    employmentType: "Part-time",
+    company: {
+      name: "Radical Health",
+      url: "https://radicalhealth.care",
+    },
+    location: {
+      name: "Remote",
+    },
+    start: "April 2025",
+    end: "Continuing",
+    description: [
+      "Maintaining the ME&T Platform",
+      "Building new features for the platform",
+      "Integrating AI agents for the platform",
+    ],
+  },
+  {
+    title: "Software Engineer",
     employmentType: "Full time",
     company: {
       name: "Radical Health",
@@ -12,7 +30,7 @@ export const experiencesConfig: Experience[] = [
       name: "Remote",
     },
     start: "August 2024",
-    end: "March 2025",
+    end: "April 2025",
     description: [
       "Built ME&T Platform thats operational on production",
       "Realtime AI orchestration pipeline development",
