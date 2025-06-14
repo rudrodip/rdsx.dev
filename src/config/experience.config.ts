@@ -3,6 +3,22 @@ import type { Experience } from "@/types";
 export const experiencesConfig: Experience[] = [
   {
     title: "Software Engineer",
+    employmentType: "Full time",
+    company: {
+      name: "Jamie.ai",
+      url: "https://www.meetjamie.ai/",
+    },
+    location: {
+      name: "Remote",
+    },
+    start: "June 2025",
+    end: "Continuing",
+    description: [
+      "Building Jamie because Jamie doesn't doodle in the meetings",
+    ],
+  },
+  {
+    title: "Software Engineer",
     employmentType: "Contract",
     company: {
       name: "LevelUp",
