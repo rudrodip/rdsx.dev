@@ -9,17 +9,17 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site.config";
 
 type ProjectPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-function getProjectFromParam(params: { slug: string }) {
-  const slug = params.slug;
+async function getProjectFromParam(params: Promise<{ slug: string }>) {
+  const { slug } = await params;
   const project = projects.find((project) => project.slugAsParams === slug);
 
   if (!project) {
-    null;
+    return null;
   }
   return project;
 }
@@ -27,7 +27,7 @@ function getProjectFromParam(params: { slug: string }) {
 export async function generateMetadata({
   params,
 }: ProjectPageProps): Promise<Metadata> {
-  const project = getProjectFromParam(params);
+  const project = await getProjectFromParam(params);
 
   if (!project) {
     return {};
@@ -66,15 +66,15 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<
-  ProjectPageProps["params"][]
+  { slug: string }[]
 > {
   return projects.map((project) => ({
     slug: project.slugAsParams,
   }));
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const project = getProjectFromParam(params);
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const project = await getProjectFromParam(params);
   
   if (!project) {
     notFound();

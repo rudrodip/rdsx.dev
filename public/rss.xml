@@ -4,7 +4,7 @@
         <title>Blogs</title>
         <link>https://rdsx.dev</link>
         <description>Hey! I am RDS (Rudro Dip Sarker), and its my personal blog where I share my learnings, experiences, and thoughts on different topics. I mostly talk about tech, but I don't have any specific niche.  I write about whatever I find interesting. I hope you will find my blogs helpful. Happy reading!</description>
-        <lastBuildDate>Sat, 12 Oct 2024 02:56:51 GMT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Jul 2025 21:38:02 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <image>
@@ -12,7 +12,7 @@
             <url>https://rdsx.dev/logo.png</url>
             <link>https://rdsx.dev</link>
         </image>
-        <copyright>All rights reserved 2024, Rudro Dip Sarker</copyright>
+        <copyright>All rights reserved 2025, Rudro Dip Sarker</copyright>
         <item>
             <title><![CDATA[I modded the Buildspace OS]]></title>
             <link>https://rdsx.dev/blogs/buildspace-os-mod</link>

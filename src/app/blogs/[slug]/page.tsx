@@ -11,17 +11,17 @@ import type { Metadata } from "next";
 import { siteConfig } from "@/config/site.config";
 
 type BlogPageParams = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
-function getBlogFromParam(params: { slug: string }) {
-  const slug = params.slug;
+async function getBlogFromParam(params: Promise<{ slug: string }>) {
+  const { slug } = await params;
   const blog = blogs.find((blog) => blog.slugAsParams === slug);
 
   if (!blog) {
-    null;
+    return null;
   }
   return blog;
 }
@@ -29,7 +29,7 @@ function getBlogFromParam(params: { slug: string }) {
 export async function generateMetadata({
   params,
 }: BlogPageParams): Promise<Metadata> {
-  const blog = getBlogFromParam(params);
+  const blog = await getBlogFromParam(params);
 
   if (!blog) {
     return {};
@@ -68,7 +68,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<
-  BlogPageParams["params"][]
+  { slug: string }[]
 > {
   return blogs.map((blog) => ({
     slug: blog.slugAsParams,
@@ -76,7 +76,7 @@ export async function generateStaticParams(): Promise<
 }
 
 export default async function BlogPost({ params }: BlogPageParams) {
-  const blog = getBlogFromParam(params);
+  const blog = await getBlogFromParam(params);
   if (!blog) {
     notFound();
   }
