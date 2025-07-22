@@ -14,7 +14,7 @@ export default function Hero() {
         <span className="font-mono text-sm underline">{siteConfig.name}</span>
       </Link>
       <div className="flex justify-between items-center mt-6">
-        <h1 className="head-text-sm">{portfolioConfig.name}</h1>
+        <h1 className="head-text-sm font-light">{portfolioConfig.name}</h1>
         <div className="flex items-center gap-2">
           <Button size="icon" variant="ghost" className="rounded-full" asChild>
             <Link href="/feed">

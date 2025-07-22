@@ -2,17 +2,28 @@ import "@/styles/globals.css";
 import "@/styles/code.css";
 import { Metadata } from "next/types";
 import { cn } from "@/lib/utils";
-import localFont from "next/font/local";
 import { siteConfig } from "@/config/site.config";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
+import { Geist, Geist_Mono } from "next/font/google";
 
-const fontHeading = localFont({
-  src: "../../assets/fonts/CalSans-SemiBold.woff2",
+const fontHeading = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-heading",
+});
+
+const fontSans = Geist({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-sans",
+});
+
+const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-mono",
 });
 
 export const metadata: Metadata = {
@@ -73,13 +84,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          fontHeading.variable,
-          GeistSans.variable,
-          GeistMono.variable
-        )}
-      >
+      <body className={cn(fontHeading.variable, fontSans.variable, fontMono.variable)}>
         <Analytics />
         <SpeedInsights />
         <ThemeProvider attribute="class" defaultTheme="light">

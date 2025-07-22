@@ -174,6 +174,7 @@ export default function Home() {
                           (e) => e.preventDefault()
                         )
                       }
+                      onCloseAutoFocus={e => e.preventDefault()}
                     >
                       <SelectItem value="Featured">Featured</SelectItem>
                       <SelectItem value="Github">Github</SelectItem>
@@ -212,6 +213,7 @@ export default function Home() {
                             (e) => e.preventDefault()
                           )
                         }
+                        onCloseAutoFocus={e => e.preventDefault()}
                       >
                         <SelectItem value="Last updated">
                           Last updated

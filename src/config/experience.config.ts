@@ -14,6 +14,7 @@ export const experiencesConfig: Experience[] = [
     start: "June 2025",
     end: "Continuing",
     description: [
+      "Design engineering is fun",
       "Building Jamie because Jamie doesn't doodle in the meetings",
     ],
   },
@@ -28,7 +29,7 @@ export const experiencesConfig: Experience[] = [
       name: "Remote",
     },
     start: "June 2025",
-    end: "Continuing",
+    end: "August 2025",
     description: [
       "Building design system for the product",
     ],
@@ -44,11 +45,10 @@ export const experiencesConfig: Experience[] = [
       name: "Remote",
     },
     start: "April 2025",
-    end: "Continuing",
+    end: "June 2025",
     description: [
       "Maintaining the ME&T Platform",
       "Building new features for the platform",
-      "Integrating AI agents for the platform",
     ],
   },
   {
@@ -69,25 +69,25 @@ export const experiencesConfig: Experience[] = [
       "Working on large scale Data Visualization",
     ],
   },
-  {
-    title: "Founder & CEO",
-    employmentType: "Part-time",
-    company: {
-      name: "Sonicrypt",
-      url: "https://sonicrypt.org",
-    },
-    location: {
-      name: "On site",
-    },
-    start: "April 2024",
-    end: "Continuing",
-    description: [
-      "Developed world's first sonification device for blockchain transactions",
-      "Developed a web faced product for the device",
-      "Developed the firmware for the device",
-      "Developed a mobile app for configuring the device",
-    ],
-  },
+  // {
+  //   title: "Founder & CEO",
+  //   employmentType: "Part-time",
+  //   company: {
+  //     name: "Sonicrypt",
+  //     url: "https://sonicrypt.org",
+  //   },
+  //   location: {
+  //     name: "On site",
+  //   },
+  //   start: "April 2024",
+  //   end: "Continuing",
+  //   description: [
+  //     "Developed world's first sonification device for blockchain transactions",
+  //     "Developed a web faced product for the device",
+  //     "Developed the firmware for the device",
+  //     "Developed a mobile app for configuring the device",
+  //   ],
+  // },
   {
     title: "Founding Engineer",
     employmentType: "Full time",

@@ -121,15 +121,15 @@
 
 /* Tailwind style */
 .head-text {
-  @apply text-4xl font-extrabold font-heading leading-[1.15] md:text-6xl sm:text-7xl;
+  @apply text-4xl font-bold font-heading tracking-tight leading-[1.15] md:text-6xl sm:text-7xl;
 }
 
 .head-text-md {
-  @apply text-3xl font-extrabold font-heading leading-[1.15] sm:text-5xl;
+  @apply text-3xl font-bold font-heading tracking-tight leading-[1.15] sm:text-5xl;
 }
 
 .head-text-sm {
-  @apply text-2xl font-extrabold font-heading leading-[1.15] sm:text-4xl;
+  @apply text-2xl font-bold font-heading tracking-tight leading-[1.15] sm:text-4xl;
 }
 
 .social-link {
